@@ -4,7 +4,7 @@ const bot = new Discord.Client();	//Instancia de bot
 
 //Variables para el bot
 const prefix = '!';	//Prefijo usado para activar comandos de bot
-const token = 'MzYxOTAzMzkyMDA1NTU0MTc2.DMSz3g.0jUmWhq7Sq1Q5Sj7WEQnyJklhBU';	//Token secreto para usar bot
+const token = 'TOKEN'	//Token secreto para usar bot, escondido por razones de seguridad
 const avatarURLkBOT = 'https://cdn.discordapp.com/attachments/368996103917666305/369657756304801802/me2.png';	//URL de avatar para KiBOT, por el mismisimo Kibo
 
 // Functions
