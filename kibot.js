@@ -6,6 +6,7 @@ const bot = new Discord.Client();	//Instancia de bot
 
 //Variables para el bot
 const config = require("./config/config.json");
+//Imagenes usadas en KiBOT se encuentran en 'https://imgur.com/a/UBRYe'
 
 // Functions
 function hook(channel, title, message, color, avatar) {	//Funcion que crea los webhooks '!hook'
@@ -169,7 +170,7 @@ bot.on('message', message => {
 	if(command === 'DADO'){	//Dado, aleatorio de [1,6], hace uso de webhook (!hook)
 		message.delete();
 		var dado = Math.floor((Math.random() * 6) + 1);
-		hook(message.channel, 'Dado', sender+' Haz lanzado un '+dado+'!','308030','https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/die-128.png');
+		hook(message.channel, 'Dado', sender+' Haz lanzado un '+dado+'!','308030','https://i.imgur.com/r3OwpNL.png');
 	}
 
     //Avatar
@@ -191,7 +192,7 @@ bot.on('message', message => {
     //Kick
     if(command === 'KICK'){
         if(msg === config.prefix + 'KICK'){
-            hook(message.channel,'Uso de Kick', config.prefix+'kick <usuario>','EEFF44','https://cdn2.iconfinder.com/data/icons/human-2-1/48/90-512.png');
+            hook(message.channel,'Uso de Kick', config.prefix+'kick <usuario>','EEFF44','https://i.imgur.com/WRlQqKl.png');
             return;
         }
         let kickea2 = message.mentions.members.first();
@@ -221,14 +222,14 @@ bot.on('message', message => {
                 .setAuthor('Coinflip!')
                 .setDescription('Salió Cara!')
                 .setColor(0x880000)
-                .setImage('https://cdn4.iconfinder.com/data/icons/banking-and-finance/500/money-euro-coin-512.png');
+                .setImage('https://i.imgur.com/eisOgJ8.png');
             message.channel.send({embed});
         }else{	//La otra opción solo puede ser 1, 'Sello'
             const embed = new Discord.RichEmbed()
                 .setAuthor('Coinflip!')
                 .setDescription('Salió Sello!')
                 .setColor(0x000088)
-                .setImage('https://cdn4.iconfinder.com/data/icons/banking-and-finance/500/money-coin-yen-512.png');
+                .setImage('https://i.imgur.com/dPYONPD.png');
             message.channel.send({embed});
     }
     }
