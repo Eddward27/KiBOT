@@ -212,6 +212,26 @@ bot.on('message', message => {
         message.delete();
         message.channel.send(texto);
     }
+
+    //Coinflip
+    if(command === 'COINFLIP' || command === 'CARAOSELLO'){
+        message.channel.send(sender+' lanzó una moneda...');	//Prepara la tensión en el ambiente
+        if(Math.floor(Math.random() * 2) === 0){  //0 se toma como 'Cara'
+            const embed = new Discord.RichEmbed()
+                .setAuthor('Coinflip!')
+                .setDescription('Salió Cara!')
+                .setColor(0x880000)
+                .setImage('https://cdn4.iconfinder.com/data/icons/banking-and-finance/500/money-euro-coin-512.png');
+            message.channel.send({embed});
+        }else{	//La otra opción solo puede ser 1, 'Sello'
+            const embed = new Discord.RichEmbed()
+                .setAuthor('Coinflip!')
+                .setDescription('Salió Sello!')
+                .setColor(0x000088)
+                .setImage('https://cdn4.iconfinder.com/data/icons/banking-and-finance/500/money-coin-yen-512.png');
+            message.channel.send({embed});
+    }
+    }
 });
 
 //Evento Listener: ready
