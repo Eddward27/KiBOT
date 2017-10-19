@@ -98,8 +98,14 @@ bot.on('message', message => {
 	if(command === 'PING'){
         let embed = new Discord.RichEmbed()
             .setColor('FF0000')
-            .setDescription(':ping_pong: Pong! - '+bot.ping+ 'ms!')
-        message.channel.send({ embed });
+            .setDescription('Ping?')
+        message.channel.send(embed)
+            .then(msg => {
+                let embedEdit = new Discord.RichEmbed()
+                    .setColor('FF0000')
+                    .setDescription(`:ping_pong: Pong! - ${msg.createdTimestamp - message.createdTimestamp}ms!`)
+                msg.edit(embedEdit)
+            });
 	}
 
 /*
