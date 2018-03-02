@@ -1,0 +1,24 @@
+{
+  "name": "kibot",
+  "version": "0.0.1",
+  "description": "KiBOT for Discord",
+  "main": "kibot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eddward27/KiBOT.git"
+  },
+  "author": "Edd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Eddward27/KiBOT/issues"
+  },
+  "homepage": "https://github.com/Eddward27/KiBOT#readme",
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "discord.js": "^11.3.0",
+    "moment": "^2.20.1"
+  }
+}
