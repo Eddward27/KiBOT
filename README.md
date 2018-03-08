@@ -20,16 +20,19 @@ El prefijo del bot es: `-`
 
 - avatar => Retorna tu avatar en Discord
 - balazos => Balazos pa los giles
+- ciencia => No lo digo yo...
 - coinflip => Lanza una moneda y ve que te toca
+- compila => No compila :c
 - f => To pay respects
-- name => Hasta ahora crashea el bot
 - ping => Pong!(ms)
 - purge => Borra 'x' cantidad de mensajes
+- repoio => Rechicken
 - say => Haz decir algo a KiBOT
 - sayd => Haz decir algo a KiBOT sin dejar tu rastro
+- shrek => Shrek c:
 - uff => Uff men
 - uptime => Cuanto tiempo lleva KiBOT despierto (DD/HH/MM/SS)
 - userid => Retorna tu id de Discord
 
 # ToDo
-Conquistar el mundo (y corregir errores de crasheo también)
+Conquistar el mundo, etc...
