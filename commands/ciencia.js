@@ -10,12 +10,12 @@ exports.run = (client, message, args, sender, perms) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [],
+  aliases: ['science'],
   permLevel: 0
 };
 
 exports.help = {
-  name: 'No lo digo yo...',
-  description: '...lo dice la ciencia',
+  name: 'ciencia',
+  description: 'No lo digo yo... lo dice la ciencia',
   usage: 'ciencia'
 };
