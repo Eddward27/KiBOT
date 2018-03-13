@@ -23,7 +23,9 @@ El prefijo del bot es: `-`
 - ciencia => No lo digo yo...
 - coinflip => Lanza una moneda y ve que te toca
 - compila => No compila :c
+- dado => Lanza un dado
 - f => To pay respects
+- help => Muestra ayuda de los comandos
 - ping => Pong!(ms)
 - purge => Borra 'x' cantidad de mensajes
 - repoio => Rechicken
