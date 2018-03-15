@@ -1,9 +1,18 @@
 exports.run = (client, message, args, sender, perms) => {
     const Discord = require('discord.js');
+    const fs = require('fs');
+    let settings = JSON.parse(fs.readFileSync("../settings.json", "utf8"));
     let respects = message.mentions.members.first();
-    if(respects)
-        return message.channel.send(sender + ' Pidió respetos para: ' + respects);
-    return message.channel.send(sender + ' Pagó respetos!');
+    if(respects){
+        settings.respetos++;
+        fs.writeFile("../settings.json", JSON.stringify(settings), (err) => console.error);
+        message.channel.send(sender + ' Pagó respetos por: ' + respects + ' - ' + settings.respetos + ' pagados en total.');
+        return;
+    }
+    settings.respetos++;
+    fs.writeFile("../settings.json", JSON.stringify(settings), (err) => console.error);
+    message.channel.send(sender + ' Pagó respetos! - ' + settings.respetos + ' pagados en total.');
+    return;
 };
 
 exports.conf = {

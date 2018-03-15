@@ -1,16 +1,16 @@
 exports.run = (client, message, args) => {
     const Discord = require('discord.js');
-    const messagecount = parseInt(args.join(' '));
+    const messagecount = parseInt(args.join(' ')) + 1;
     if(isNaN(messagecount)) return;
-    if(messagecount < 2 || messagecount > 100) return;
+    if(messagecount < 3 || messagecount > 101) return;
     message.channel.fetchMessages({
       limit: messagecount
   }).then(messages => {
       message.channel.bulkDelete(messages)
-      console.log(messages.size + ' mensajes fueron borrados del canal "' + message.channel.name + '"')
+      console.log(messages.size-1 + ' mensajes fueron borrados del canal "' + message.channel.name + '" en "' + message.guild.name + '"')
       let embed = new Discord.RichEmbed()
           .setColor('030303')
-          .setDescription(messages.size + ' mensajes fueron exitosamente borrados!')
+          .setDescription(messages.size-1 + ' mensajes fueron exitosamente borrados!')
       message.channel.send(embed)
   });
 };
