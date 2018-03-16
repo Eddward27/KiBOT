@@ -28,6 +28,7 @@ El prefijo del bot es: `-`
 - help => Muestra ayuda de los comandos
 - ping => Pong!(ms)
 - purge => Borra 'x' cantidad de mensajes
+- remindme => Deja recordarte algo en un tiempo especificado
 - repoio => Rechicken
 - say => Haz decir algo a KiBOT
 - sayd => Haz decir algo a KiBOT sin dejar tu rastro
