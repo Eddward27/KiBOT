@@ -11,7 +11,7 @@ exports.run = (client, message, args, sender, perms) => {
         var tiempo;
         var medidaTiempo;
         message = message.content.split(' ');
-        console.log('[reminder] Mensaje de "' + msg.author.username + '" en: "' + msg.guild.name + `" recibido - ${new Date()}`);
+        console.log('[reminder in] Mensaje de "' + msg.author.username + '" en: "' + msg.guild.name + `" recibido - ${new Date()}`);
 
         medidaTiempo = message[1].substring((message[1].length - 1), (message[1].length));
         tiempo = message[1].substring(0, (message[1].length - 1));
@@ -47,12 +47,12 @@ exports.run = (client, message, args, sender, perms) => {
             content = content.replaceAll(',', ' ');
             msg.reply(content);
 
-            console.log('[reminder] Mensaje de "' + msg.author.username + '" en: "' + msg.guild.name + `" enviado - ${new Date()}`);
+            console.log('[reminder out] Mensaje de "' + msg.author.username + '" en: "' + msg.guild.name + `" enviado - ${new Date()}`);
         }, tiempo)
     } catch (e) {
         const embed = new Discord.RichEmbed()
             .setAuthor('Reminder')
-            .setDescription('Ha ocurrido un error, asegurate de que el mensaje contiene un límite de tiempo designado\n\nremindme <tiempo> <mensaje>\nEjemplo: 30m\ns -> Segundo\nm -> Minutos\n d -> Dias')
+            .setDescription('Ha ocurrido un error, asegurate de que el mensaje contiene un límite de tiempo designado\n\nremindme <tiempo> <mensaje>\nEjemplo: remindme 30m a la camita!\ns -> Segundo\nm -> Minutos\n d -> Dias')
             .setColor(0x172D51);
         msg.reply({embed});
         console.error(e.toString());

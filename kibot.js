@@ -7,7 +7,7 @@ const moment = require('moment');
 require('./util/eventLoader')(client);
 
 const log = message => {
-    console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
+    console.log(chalk.yellow(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`));
 };
 
 client.commands = new Discord.Collection();
@@ -16,11 +16,11 @@ fs.readdir('./commands/', (err, files) => {
     if (err) console.error(err);
     log(`Cargando ${files.length} comandos.`);
     files.forEach(f => {
-    let props = require(`./commands/${f}`);
-    log(`Cargando comando: ${props.help.name}. 👌`);
-    client.commands.set(props.help.name, props);
-    props.conf.aliases.forEach(alias => {
-        client.aliases.set(alias, props.help.name);
+        let props = require(`./commands/${f}`);
+        log(`Cargando comando: ${props.help.name}. 👌`);
+        client.commands.set(props.help.name, props);
+        props.conf.aliases.forEach(alias => {
+            client.aliases.set(alias, props.help.name);
         });
     });
 });
@@ -58,7 +58,6 @@ client.elevation = message => {
 };
 
 var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
-
 /*
 client.on('debug', e => {
 console.log(chalk.bgBlue.green(e.replace));//console.log(chalk.bgBlue.green(e.replace(regToken, 'that was redacted')));
@@ -66,11 +65,11 @@ console.log(chalk.bgBlue.green(e.replace));//console.log(chalk.bgBlue.green(e.re
 */
 
 client.on('warn', e => {
-    console.log(chalk.bgYellow(e.replace));//console.log(chalk.bgYellow(e.replace(regToken, 'that was redacted')));
+    console.log(chalk.bgYellow('[ADVERTENCIA]: ' + e.replace));//console.log(chalk.bgYellow(e.replace(regToken, 'that was redacted')));
 });
 
 client.on('error', e => {
-    console.log(chalk.bgRed(e.replace));//console.log(chalk.bgRed(e.replace(regToken, 'that was redacted')));
+    console.log(chalk.bgRed('[ERROR]: ' + e.replace));//console.log(chalk.bgRed(e.replace(regToken, 'that was redacted')));
 });
 
 client.login(settings.token);

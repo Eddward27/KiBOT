@@ -7,5 +7,7 @@
 	"guildID": "368996103477002242",
 	"guildPrimaryChannel": "372235242293166080",
 	"inviteLink": "https://discordapp.com/oauth2/authorize?client_id=361903392005554176&scope=bot&permissions=2143812855&redirect_uri=https://i.imgur.com/CD8wApW.png",
-	"respetos": "0"
+	"respetos": "0",
+	"countSpam": "0",
+	"idSpam": ""
 }

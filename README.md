@@ -18,6 +18,7 @@ Luego, ejecutar el comando `node kibot.js` desde la ubicacion del bot
 
 El prefijo del bot es: `-`
 
+- 8ball => Preguntale algo a la bola 8!
 - avatar => Retorna tu avatar en Discord
 - balazos => Balazos pa los giles
 - ciencia => No lo digo yo...
