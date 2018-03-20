@@ -37,6 +37,7 @@ El prefijo del bot es: `-`
 - uff => Uff men
 - uptime => Cuanto tiempo lleva KiBOT despierto (DD/HH/MM/SS)
 - userid => Retorna tu id de Discord
+- userinfo => Muestra la informacion de algún usuario
 
 # ToDo
 Conquistar el mundo, etc...
