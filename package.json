@@ -18,7 +18,9 @@
   "homepage": "https://github.com/Eddward27/KiBOT#readme",
   "dependencies": {
     "chalk": "^2.3.2",
-    "discord.js": "^11.3.0",
-    "moment": "^2.20.1"
+    "discord.js": "^11.3.2",
+    "moment": "^2.21.0",
+    "npm": "^5.7.1",
+    "random-puppy": "^1.1.0"
   }
 }

@@ -24,7 +24,7 @@ module.exports = message => {
         settings.idSpam = message.client.id;
         settings.countSpam = 0;
     }
-    if(settings.countSpam > 3 && message.channel.id !== 305843252769193986){
+    if(settings.countSpam > 3 && message.channel.id !== '305843252769193986'){
         message.channel.send(sender + ' Por favor deja mi spam en ' + client.channels.get("305843252769193986"));
         settings.countSpam = 0;
     }

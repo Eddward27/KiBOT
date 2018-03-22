@@ -25,6 +25,7 @@ El prefijo del bot es: `-`
 - coinflip => Lanza una moneda y ve que te toca
 - compila => No compila :c
 - dado => Lanza un dado
+- dog => Muestra perrito random desde: 'https://www.reddit.com/r/puppy'
 - f => To pay respects
 - help => Muestra ayuda de los comandos
 - ping => Pong!(ms)
