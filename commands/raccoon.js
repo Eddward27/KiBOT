@@ -2,13 +2,13 @@ exports.run = (client, message, args, sender, perms) => {
     const Discord = require('discord.js');
     const randomPuppy = require('random-puppy');
 
-    randomPuppy('dog')
+    randomPuppy('raccoon')
     .then(url => {
-        console.log('[PERRO]: ' + url);
+        console.log('[MAPACHE]: ' + url);
         const embed = new Discord.RichEmbed()
             .setColor(0x880000)
             .setImage(url)
-            .setFooter('Auspiciado por: https://www.reddit.com/r/dog');
+            .setFooter('Auspiciado por: https://www.reddit.com/r/cat');
         message.channel.send({embed});
     })
 };
@@ -16,12 +16,12 @@ exports.run = (client, message, args, sender, perms) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['doggo', 'inu', 'perro', 'doge', 'pupper', 'cachorro'],
+  aliases: ['mapache', 'mapocho', 'racc', 'trashpanda', 'ladron'],
   permLevel: 0
 };
 
 exports.help = {
-  name: 'dog',
-  description: 'Perrito random auspiciado por: https://www.reddit.com/r/dog',
-  usage: 'dog'
+  name: 'raccoon',
+  description: 'Mapache random auspiciado por: https://www.reddit.com/r/raccoon',
+  usage: 'raccoon'
 };
