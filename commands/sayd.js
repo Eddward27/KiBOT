@@ -1,7 +1,10 @@
-exports.run = (client, message, args) => {
+exports.run = (client, message, args, sender) => {
+    const moment = require('moment');
+    const chalk = require('chalk');
     let texto = args.join(" ");
     message.delete();
     message.channel.send(texto);
+    console.log(chalk.bgBlackBright('[Sayd]') + ' ' + sender.username + '@' + message.channel.name + ' Mensaje: ' + texto + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
 };
 
 exports.conf = {

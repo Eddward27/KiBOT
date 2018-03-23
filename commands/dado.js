@@ -1,5 +1,7 @@
 exports.run = (client, message, args, sender, perms) => {
     const Discord = require('discord.js');
+    const moment = require('moment');
+    const chalk = require('chalk');
     message.channel.send(sender+' lanzó un dado...');	//Prepara la tensión en el ambiente
     let resultado = (Math.floor(Math.random() * 6)) + 1; //Resultado [1,6]
     let dado;
@@ -24,7 +26,7 @@ exports.run = (client, message, args, sender, perms) => {
             break;
         default:
             message.channel.send('Ups... algo salió mal (mas detalles en consola)');
-            console.log('El random para el dado fué: ' + resultado + ' - Revisa el código.');
+            console.log(chalk.bgRed('[Dado]') + ' El random para el dado fué: ' + resultado + ` - Revisa el código. [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
             return;
     }
     const embed = new Discord.RichEmbed()
@@ -33,6 +35,7 @@ exports.run = (client, message, args, sender, perms) => {
         .setColor(0x840000)
         .setImage(dado);
     message.channel.send({embed});
+    console.log(chalk.bgRed('[Dado]') + ' '+ sender.username + '@' + message.channel.name + ' Resultado: ' + resultado + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
 };
 
 exports.conf = {

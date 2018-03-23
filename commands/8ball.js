@@ -1,5 +1,11 @@
 exports.run = (client, message, args, sender, perms) => {
-    if (args.length < 1) return message.reply('Necesitas preguntarle algo a la bola para que te responda!');
+    const moment = require('moment');
+    const chalk = require('chalk');
+    if (args.length < 1){
+        message.reply('Necesitas preguntarle algo a la bola para que te responda!');
+        console.log(chalk.bgRed('[Bola8]') + ' '+ sender.username + '@' + message.channel.name + ` sin pregunta [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
+        return;
+    }
     const respuestas = [
         'Que las probabilidades estén a tu favor...',
         'Definitivamente no! En serio pensaste que esto funcionaría?',
@@ -29,7 +35,11 @@ exports.run = (client, message, args, sender, perms) => {
         'Muy dudoso',
     ];
 
-    message.channel.send(':8ball: *' + (respuestas[Math.floor(Math.random() * respuestas.length)]) + '*');
+    let indexRespuesta = Math.floor(Math.random() * respuestas.length);
+    let pregunta = args.join(" ");
+
+    message.channel.send(':8ball: *' + respuestas[indexRespuesta] + '*');
+    console.log('[Bola8] '+ sender.username + '@' + message.channel.name + ' Pregunta: ' + pregunta + ' - Respuesta: ' + respuestas[indexRespuesta] + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
 };
 
 exports.conf = {

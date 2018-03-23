@@ -1,5 +1,7 @@
 exports.run = (client, message, args, sender) => {
     const Discord = require('discord.js');
+    const moment = require('moment');
+    const chalk = require('chalk');
     message.channel.send(sender+' lanzó una moneda...');	//Prepara la tensión en el ambiente
     if(Math.floor(Math.random() * 2) === 0){  //0 se toma como 'Cara'
         const embed = new Discord.RichEmbed()
@@ -8,6 +10,7 @@ exports.run = (client, message, args, sender) => {
             .setColor(0x880000)
             .setImage('https://i.imgur.com/eisOgJ8.png');
         message.channel.send({embed});
+        console.log(chalk.bgRed('[Moneda]') + ' '+ sender.username + '@' + message.channel.name + ` CARA! [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
     }else{	//La otra opción solo puede ser 1, 'Sello'
         const embed = new Discord.RichEmbed()
             .setAuthor('Coinflip!')
@@ -15,6 +18,7 @@ exports.run = (client, message, args, sender) => {
             .setColor(0x000088)
             .setImage('https://i.imgur.com/dPYONPD.png');
         message.channel.send({embed});
+        console.log(chalk.bgRed('[Moneda]') + ' '+ sender.username + '@' + message.channel.name + ` SELLO! [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
     }
 };
 

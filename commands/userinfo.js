@@ -1,10 +1,14 @@
 exports.run = (client, message, args, sender, perms) => {
     const Discord = require('discord.js');
+    const moment = require('moment');
+    const chalk = require('chalk');
     let user;
     if (!message.mentions.members.first()) {
       user = sender;
+      console.log(chalk.bgBlackBright('[User Info]') + ' ' + user.username + '@' + message.channel.name + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
     } else {
       user = message.mentions.members.first();
+      console.log(chalk.bgBlackBright('[User Info]') + ' ' + sender.username + '@' + message.channel.name + ' User: ' + user.displayName + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
     }
 
     const embed = new Discord.RichEmbed()

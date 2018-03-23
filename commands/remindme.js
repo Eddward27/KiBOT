@@ -1,5 +1,7 @@
 exports.run = (client, message, args, sender, perms) => {
     const Discord = require('discord.js');
+    const moment = require('moment');
+    const chalk = require('chalk');
 
     String.prototype.replaceAll = function(search, replacement) {
         var target = this;
@@ -11,7 +13,6 @@ exports.run = (client, message, args, sender, perms) => {
         var tiempo;
         var medidaTiempo;
         message = message.content.split(' ');
-        console.log('[reminder in] Mensaje de "' + msg.author.username + '" en: "' + msg.guild.name + `" recibido - ${new Date()}`);
 
         medidaTiempo = message[1].substring((message[1].length - 1), (message[1].length));
         tiempo = message[1].substring(0, (message[1].length - 1));
@@ -38,6 +39,8 @@ exports.run = (client, message, args, sender, perms) => {
                 break;
         }
 
+        console.log(chalk.bgBlackBright('[Reminder IN]') + ' ' + msg.author.username + '@' + msg.guild.name + ` [${message}] - [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
+
         client.setTimeout(function () {
 
             message.shift();
@@ -47,7 +50,7 @@ exports.run = (client, message, args, sender, perms) => {
             content = content.replaceAll(',', ' ');
             msg.reply(content);
 
-            console.log('[reminder out] Mensaje de "' + msg.author.username + '" en: "' + msg.guild.name + `" enviado - ${new Date()}`);
+            console.log(chalk.bgBlackBright('[Reminder OUT]') + ' ' + msg.author.username + '@' + msg.guild.name + ` [${content}] - [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
         }, tiempo)
     } catch (e) {
         const embed = new Discord.RichEmbed()

@@ -1,5 +1,7 @@
 exports.run = (client, message, args, sender) => {
     const Discord = require('discord.js');
+    const moment = require('moment');
+    const chalk = require('chalk');
     const embed = new Discord.RichEmbed()
         .setAuthor('Avatar')
         .setDescription(sender)
@@ -7,6 +9,7 @@ exports.run = (client, message, args, sender) => {
         .setImage(sender.avatarURL)
         .setURL(sender.avatarURL)
     message.channel.send({embed});
+    console.log(chalk.bgBlackBright('[Avatar]') + ' ' + sender.username + '@' + message.channel.name + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
 };
 
 exports.conf = {

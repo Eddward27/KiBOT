@@ -1,7 +1,14 @@
 exports.run = (client, message, args, sender) => {
+    const moment = require('moment');
+    const chalk = require('chalk');
     let mention = message.mentions.members.first();
-    if(!mention) return message.channel.send(sender +' tu ID de Discord es: \''+sender.id+'\'');
+    if(!mention){
+        message.channel.send(sender +' tu ID de Discord es: \''+sender.id+'\'');
+        console.log(chalk.bgBlackBright('[ID]') + ' ' + sender.username + '@' + message.channel.name + ' ID: ' + sender.id + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
+        return;
+    }
     message.channel.send('El ID de Discord de: ' + mention.displayName + ' es: \'' + mention.id +'\'');
+    console.log(chalk.bgBlackBright('[ID]') + ' ' + sender.username + '@' + message.channel.name + ' User: ' + mention.displayName + ' ID: ' + mention.id + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
 };
 
 exports.conf = {

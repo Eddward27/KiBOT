@@ -1,4 +1,6 @@
 exports.run = (client, message, args, sender, perms) => {
+    const moment = require('moment');
+    const chalk = require('chalk');
     let uptime = client.uptime;
     let dias = 0;
     let horas = 0;
@@ -22,6 +24,7 @@ exports.run = (client, message, args, sender, perms) => {
         if (uptime < 1000)  noListo = false;
     }
     message.channel.send(`**Uptime:\n\nDias: \`${dias}\` \nHoras: \`${horas}\` \nMinutos: \`${minutos}\` \nSegundos: \`${segundos}\`**`);
+    console.log(chalk.bgBlackBright('[Uptime]') + ' ' + sender.username + '@' + message.channel.name + `\nDias: \`${dias}\` \nHoras: \`${horas}\` \nMinutos: \`${minutos}\` \nSegundos: \`${segundos}\`\n[${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
 };
 
 exports.conf = {
