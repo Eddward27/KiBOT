@@ -1,19 +1,20 @@
 exports.run = (client, message, args, sender) => {
     const Discord = require('discord.js');
-    const messagecount = parseInt(args.join(' ')) + 1;
+    const messagecount = parseInt(args.join(' '));
     const moment = require('moment');
     const chalk = require('chalk');
+    message.delete();
     if(isNaN(messagecount)) return;
-    if(messagecount < 3 || messagecount > 101) return;
+    if(messagecount < 2 || messagecount > 100) return;
     message.channel.fetchMessages({
       limit: messagecount
   }).then(messages => {
       message.channel.bulkDelete(messages)
-      let consoleNumber = messagecount-1
+      let consoleNumber = messagecount
       console.log(chalk.bgBlackBright('[Purge]') + ' ' + message.author.username + '@' + message.channel.name + ' Mensajes: ' + consoleNumber + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`)
       let embed = new Discord.RichEmbed()
           .setColor('030303')
-          .setDescription(messages.size-1 + ' mensajes fueron exitosamente borrados!')
+          .setDescription(messages.size + ' mensajes fueron exitosamente borrados!')
       message.channel.send(embed)
   });
 };

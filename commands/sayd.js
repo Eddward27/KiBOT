@@ -1,6 +1,10 @@
 exports.run = (client, message, args, sender) => {
     const moment = require('moment');
     const chalk = require('chalk');
+    if (args.length < 1){
+        console.log(chalk.bgBlackBright('[Sayd]') + ' ' + sender.username + '@' + message.channel.name + ` Sin mensaje - [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
+        return message.channel.send("Que tengo que decir?");
+    }
     let texto = args.join(" ");
     message.delete();
     message.channel.send(texto);
