@@ -22,7 +22,7 @@ exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: ['delete', 'pg'],
-  permLevel: 0
+  permLevel: 1
 };
 
 exports.help = {
