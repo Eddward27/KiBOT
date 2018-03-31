@@ -6,8 +6,20 @@ exports.run = (client, message, args, sender) => {
     function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
-    var pkmn1 = Math.floor(Math.random() * poke.name.length);
-    var pkmn2 = Math.floor(Math.random() * poke.name.length);
+    var pkmn1
+    var pkmn2
+    if (args.length < 1){
+        pkmn1 = Math.floor(Math.random() * poke.name.length);
+        pkmn2 = Math.floor(Math.random() * poke.name.length);
+    }else{
+        var customPKMN1 = parseInt(args[0])
+        var customPKMN2 = parseInt(args[1])
+        if(isNaN(customPKMN1) || isNaN(customPKMN2) || customPKMN1 > 151 || customPKMN2 > 151 || customPKMN1 < 0 || customPKMN2 < 0){
+            return message.channel.send("Por favor ingresa 2 números menores a 151 para realizar la fusión")
+        }
+        pkmn1 = customPKMN1
+        pkmn2 = customPKMN2
+    }
     while (pkmn1 === pkmn2){
         var pkmn2 = Math.floor(Math.random() * poke.name.length);
     }
@@ -38,8 +50,6 @@ exports.run = (client, message, args, sender) => {
     console.log(chalk.bgRed('[Pokéfusion]') + ' '+ sender.username + '@' + message.channel.name + ` ${poke.name[pkmn1]} (${pkmn1}) & ${poke.name[pkmn2]} (${pkmn2}) = ${poke.nameFront[pkmn1]}${poke.nameEnd[pkmn2]} [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
 };
 
-//https://www.pokemon.com/us/pokedex/
-
 exports.conf = {
     enabled: true,
     guildOnly: false,
@@ -49,6 +59,6 @@ exports.conf = {
 
 exports.help = {
     name: 'pokefusion',
-    description: 'Muestra una Pokéfusion aleatoria (Gen. 1)',
-    usage: 'pokefusion'
+    description: 'Muestra una Pokéfusion aleatoria (Gen. 1) o bien recibe dos números hasta el 151 para crear la fusion pedida',
+    usage: 'pokefusion [N° Poké 1] [N° Poké 2]'
 };
