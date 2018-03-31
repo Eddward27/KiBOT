@@ -9,5 +9,8 @@
 	"guildPrimaryChannel": "372235242293166080",
 	"respetos": "0",
 	"countSpam": "0",
-	"idSpam": ""
+	"countReport": "0",
+	"idSpam": "",
+	"invite": "https://discordapp.com/oauth2/authorize?client_id=361903392005554176&permissions=8&scope=bot",
+	"support": "https://discord.gg/JWkPJzt"
 }
