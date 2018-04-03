@@ -11,7 +11,7 @@ exports.run = (client, message, args, sender) => {
   }).then(messages => {
       message.channel.bulkDelete(messages)
       let consoleNumber = messagecount
-      console.log(chalk.bgBlackBright('[Purge]') + ' ' + message.author.username + '@' + message.channel.name + 'Mensajes Encontrados: '+ messages.size + ' Mensajes Pedidos: ' + consoleNumber + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`)
+      console.log(chalk.bgBlackBright('[Purge]') + ' ' + message.author.username + '@' + message.channel.name + ' Mensajes Encontrados: '+ messages.size + ' Mensajes Pedidos: ' + consoleNumber + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`)
       let embed = new Discord.RichEmbed()
           .setColor('030303')
           .setDescription(messages.size + ' mensajes fueron exitosamente borrados!')

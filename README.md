@@ -22,6 +22,7 @@ El prefijo del bot es: `-`
 - avatar => Retorna tu avatar en Discord
 - balazos => Balazos pa los giles
 - cat => Muestra gato random desde: 'https://www.reddit.com/r/cat'
+- choose => Elige aleatoriamente una opción de los argumentos recibidos separados por un espacio (Min. 2)
 - ciencia => No lo digo yo...
 - coinflip => Lanza una moneda y ve que te toca
 - compila => No compila :c
@@ -30,11 +31,14 @@ El prefijo del bot es: `-`
 - f => To pay respects
 - frog => Muestra rana random desde: 'https://www.reddit.com/r/frog'
 - help => Muestra ayuda de los comandos
+- owl => Muestra búho random desde: 'https://www.reddit.com/r/owls'
 - ping => Pong!(ms)
+- pokefusion => Muestra una Pokéfusion aleatoria (Gen. 1) o bien recibe dos números hasta el 151 para crear la fusion pedida
 - purge => Borra 'x' cantidad de mensajes
 - raccoon => Muestra mapache random desde: 'https://www.reddit.com/r/raccoon'
 - remindme => Deja recordarte algo en un tiempo especificado
 - repoio => Rechicken
+- report => Envía un reporte de bug hacia los cuarteles generales de KiBOT
 - say => Haz decir algo a KiBOT
 - sayd => Haz decir algo a KiBOT sin dejar tu rastro
 - shrek => Shrek c:

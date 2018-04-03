@@ -21,7 +21,7 @@ exports.run = (client, message, args, sender, perms) => {
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ['elige', 'escoge', 'selecciona'],
+    aliases: ['elige', 'escoge', 'selecciona', 'pick'],
     permLevel: 0
 };
 
