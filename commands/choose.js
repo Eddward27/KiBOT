@@ -7,6 +7,15 @@ exports.run = (client, message, args, sender, perms) => {
         console.log(chalk.bgRed('[Choose]') + ' '+ sender.username + '@' + message.channel.name + ` sin argumentos mínimos [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
         return;
     }
+    let lowerArgs = args.map(v => v.toLowerCase());
+    if (lowerArgs.includes('monika')){
+        message.channel.send("J̴̙͌ȕ̶̮͜s̴̗̳̐ť̸̊ͅM̸͔̍ǒ̵̗̬n̵̙̙̈́i̴̛̺̱̐k̵͕̟͊å̸͇̭ J̴̙͌ȕ̶̮͜s̴̗̳̐ť̸̊ͅM̸͔̍ǒ̵̗̬n̵̙̙̈́i̴̛̺̱̐k̵͕̟͊å̸͇̭ J̴̙͌ȕ̶̮͜s̴̗̳̐ť̸̊ͅM̸͔̍ǒ̵̗̬n̵̙̙̈́i̴̛̺̱̐k̵͕̟͊å̸͇̭ J̴̙͌ȕ̶̮͜s̴̗̳̐ť̸̊ͅM̸͔̍ǒ̵̗̬n̵̙̙̈́i̴̛̺̱̐k̵͕̟͊å̸͇̭ J̴̙͌ȕ̶̮͜s̴̗̳̐ť̸̊ͅM̸͔̍ǒ̵̗̬n̵̙̙̈́i̴̛̺̱̐k̵͕̟͊å̸͇̭ J̴̙͌ȕ̶̮͜s̴̗̳̐ť̸̊ͅM̸͔̍ǒ̵̗̬n̵̙̙̈́i̴̛̺̱̐k̵͕̟͊å̸͇̭ J̴̙͌ȕ̶̮͜s̴̗̳̐ť̸̊ͅM̸͔̍ǒ̵̗̬n̵̙̙̈́i̴̛̺̱̐k̵͕̟͊å̸͇̭ J̴̙͌ȕ̶̮͜s̴̗̳̐ť̸̊ͅM̸͔̍ǒ̵̗̬n̵̙̙̈́i̴̛̺̱̐k̵͕̟͊å̸͇̭");
+        message.channel.send("JUST");
+        message.channel.send("MONIKA")
+        console.log(chalk.bgRed('[Choose]') + ' '+ sender.username + '@' + message.channel.name + ` MONIKA [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
+        return;
+    }
+
     let indexChoose = Math.floor(Math.random() *args.length);
     message.channel.send(`Yo eligo`)
         .then(msg => {
