@@ -4,7 +4,7 @@ exports.run = (client, message, args, sender, perms) => {
     const chalk = require('chalk');
     var request = require('request');
 
-    request('https://random.dog/woof.json', function (error, response, body) {
+    request('https://random.dog/woof.json?filter=mp4,webm', function (error, response, body) {
         if(error){
             console.log(chalk.bgMagenta('[Perro] from: ' + sender.username + '@' + message.channel.name + " - ERROR: ") + error)
         }
