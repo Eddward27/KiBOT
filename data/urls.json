@@ -1,0 +1,8 @@
+{
+    "birdAPI": "http://random.birb.pw/tweet/",
+    "birdIMG": "https://random.birb.pw/img/",
+    "catAPI": "http://aws.random.cat/meow",
+    "dogAPI": "https://random.dog/woof.json?filter=mp4,webm",
+    "foxAPI": "https://giraffeduck.com/api/fox/",
+    "snakeAPI": "http://fur.im/snek/"
+}

@@ -23,27 +23,27 @@ exports.run = (client, message, args, sender) => {
     while (pkmn1 === pkmn2){
         var pkmn2 = Math.floor(Math.random() * poke.name.length);
     }
-    var urlFusionIMG = "http://images.alexonsager.net/pokemon/fused/" + pkmn2 + "/" + pkmn2 + "." + pkmn1 + ".png"
-    var urlFusion = "http://pokemon.alexonsager.net/" + pkmn1 + "/" + pkmn2
+    //var urlFusionIMG = "http://images.alexonsager.net/pokemon/fused/" + pkmn2 + "/" + pkmn2 + "." + pkmn1 + ".png"
+    //var urlFusion = "http://pokemon.alexonsager.net/" + pkmn1 + "/" + pkmn2
     var fusionName = poke.nameFront[pkmn1] + poke.nameEnd[pkmn2]
-    var urlPKMN1 = "https://www.pokemon.com/us/pokedex/" + poke.name[pkmn1]
+    var urlPKMN1 = poke.urlPKMN + poke.name[pkmn1]
     if(pkmn1 === 122){
-        urlPKMN1 = "https://www.pokemon.com/us/pokedex/mr-mime"
+        urlPKMN1 = poke.urlPKMN + "mr-mime"
         fusionName = poke.nameFront[pkmn1] + capitalizeFirstLetter(poke.nameEnd[pkmn2])
     }
-    var urlPKMN2 = "https://www.pokemon.com/us/pokedex/" + poke.name[pkmn2]
+    var urlPKMN2 = poke.urlPKMN + poke.name[pkmn2]
     if(pkmn2 === 122)
-        urlPKMN2 = "https://www.pokemon.com/us/pokedex/Mr-Mime"
+        urlPKMN2 = poke.urlPKMN + "mr-mime"
     var footBerry = Math.floor(Math.random() * poke.berry.length);
     const embed = new Discord.RichEmbed()
-        .setAuthor(fusionName, "https://cdn.bulbagarden.net/upload/9/93/Bag_Pok%C3%A9_Ball_Sprite.png", urlFusion)
-        .setThumbnail("https://cdn.bulbagarden.net/upload/9/9f/Key_Pok%C3%A9dex_m_Sprite.png")
+        .setAuthor(fusionName, poke.pokeballICO, `${poke.urlFusion}${pkmn1}/${pkmn2}`)
+        .setThumbnail(poke.dexSprite)
         .setTitle("Pokéfusion!")
-        .setURL(urlFusion)
+        .setURL(`${poke.urlFusion}${pkmn1}/${pkmn2}`)
         .setDescription("Fusion de: " + poke.name[pkmn1] + " & " + poke.name[pkmn2])
         .addField(poke.name[pkmn1], urlPKMN1)
         .addField(poke.name[pkmn2], urlPKMN2)
-        .setImage(urlFusionIMG)
+        .setImage(`${poke.urlFusionIMG}${pkmn2}/${pkmn2}.${pkmn1}.png`)
         .setColor(0x770000)
         .setFooter(fusionName, poke.berry[footBerry]);
     message.channel.send({embed});

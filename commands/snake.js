@@ -5,18 +5,18 @@ exports.run = (client, message, args, sender, perms) => {
     const urls = require('../data/urls.json');
     var request = require('request');
 
-    request(urls.catAPI, function (error, response, body) {
+    request(urls.snakeAPI, function (error, response, body) {
         if(error){
-            console.log(chalk.bgMagenta('[Gato] from: ' + sender.username + '@' + message.channel.name + " - ERROR: ") + error)
+            console.log(chalk.bgMagenta('[Snake] from: ' + sender.username + '@' + message.channel.name + " - ERROR: ") + error)
         }
         if(response.statusCode === 200){
             let bodyJSON = JSON.parse(body);
             const embed = new Discord.RichEmbed()
                 .setColor(0x880000)
                 .setImage(bodyJSON.file)
-                .setFooter('Auspiciado por: random.cat');
+                .setFooter('Auspiciado por: fur.im');
             message.channel.send({embed});
-            console.log(chalk.bgMagenta('[Gato]') + ' '+ sender.username + '@' + message.channel.name + ' URL: ' + bodyJSON.file + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
+            console.log(chalk.bgMagenta('[Snake]') + ' '+ sender.username + '@' + message.channel.name + ' URL: ' + bodyJSON.file + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
         }
     });
 };
@@ -24,12 +24,12 @@ exports.run = (client, message, args, sender, perms) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['catto', 'neko', 'gato', 'gatito', 'kitten', 'kitty', 'cuchito'],
+  aliases: ['culebra', 'serpiente', 'snek'],
   permLevel: 0
 };
 
 exports.help = {
-  name: 'cat',
-  description: 'Gato random auspiciado por: random.cat',
-  usage: 'cat'
+  name: 'snake',
+  description: 'Serpiente random auspiciado por: fur.im',
+  usage: 'snake'
 };

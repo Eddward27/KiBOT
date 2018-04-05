@@ -2,10 +2,11 @@ exports.run = (client, message, args, sender, perms) => {
     const Discord = require('discord.js');
     const moment = require('moment');
     const chalk = require('chalk');
+    const imgs = require('../data/imgs.json');
     const embed = new Discord.RichEmbed()
         .setDescription('No lo dice ' + sender + ', lo dice la ciencia')
         .setColor(0x4490FF)
-        .setImage('https://i.imgur.com/eBdo41P.jpg');
+        .setImage(imgs.ciencia);
     message.channel.send({embed});
     console.log(chalk.bgRed('[Ciencia]') + ' '+ sender.username + '@' + message.channel.name + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
 };

@@ -24,7 +24,7 @@ exports.run = (client, message, args, sender, perms) => {
         if (uptime < 1000)  noListo = false;
     }
     message.channel.send(`**Uptime:\n\nDias: \`${dias}\` \nHoras: \`${horas}\` \nMinutos: \`${minutos}\` \nSegundos: \`${segundos}\`**`);
-    console.log(chalk.bgBlackBright('[Uptime]') + ' ' + sender.username + '@' + message.channel.name + `\nDias: \`${dias}\` \nHoras: \`${horas}\` \nMinutos: \`${minutos}\` \nSegundos: \`${segundos}\`\n[${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
+    console.log(chalk.bgBlackBright('[Uptime]') + ' ' + sender.username + '@' + message.channel.name + `d:${dias} h:${horas} m:${minutos} s:${segundos} - [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
 };
 
 exports.conf = {

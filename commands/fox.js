@@ -5,18 +5,18 @@ exports.run = (client, message, args, sender, perms) => {
     const urls = require('../data/urls.json');
     var request = require('request');
 
-    request(urls.dogAPI, function (error, response, body) {
+    request(urls.foxAPI, function (error, response, body) {
         if(error){
-            console.log(chalk.bgMagenta('[Perro] from: ' + sender.username + '@' + message.channel.name + " - ERROR: ") + error)
+            console.log(chalk.bgMagenta('[Zorro] from: ' + sender.username + '@' + message.channel.name + " - ERROR: ") + error)
         }
         if(response.statusCode === 200){
             let bodyJSON = JSON.parse(body);
             const embed = new Discord.RichEmbed()
                 .setColor(0x880000)
                 .setImage(bodyJSON.url)
-                .setFooter('Auspiciado por: random.dog');
+                .setFooter('Auspiciado por: giraffeduck.com');
             message.channel.send({embed});
-            console.log(chalk.bgMagenta('[Perro]') + ' '+ sender.username + '@' + message.channel.name + ' URL: ' + bodyJSON.url + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
+            console.log(chalk.bgMagenta('[Zorro]') + ' '+ sender.username + '@' + message.channel.name + ' URL: ' + bodyJSON.url + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
         }
     });
 };
@@ -24,12 +24,12 @@ exports.run = (client, message, args, sender, perms) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['doggo', 'inu', 'perro', 'doge', 'pupper', 'cachorro'],
+  aliases: ['zorro', 'foxxo', 'firefox'],
   permLevel: 0
 };
 
 exports.help = {
-  name: 'dog',
-  description: 'Perrito random auspiciado por: random.dog',
-  usage: 'dog'
+  name: 'fox',
+  description: 'Zorro random auspiciado por: giraffeduck.com',
+  usage: 'fox'
 };

@@ -4,6 +4,7 @@ exports.run = (client, message, args, sender, perms) => {
     const moment = require('moment');
     const chalk = require('chalk');
     const settings = require('../settings.json');
+    const imgs = require('../data/imgs.json');
     let counter = JSON.parse(fs.readFileSync("../settings.json", "utf8"));
     if (args.length < 1){
         message.delete()
@@ -16,7 +17,7 @@ exports.run = (client, message, args, sender, perms) => {
     const bugChannel = client.guilds.find('id', '429696032775864335').channels.find('id', '429719945253879818');
     let reporte = args.join(" ");
     const embed = new Discord.RichEmbed()
-        .setAuthor("Bug Report!", "https://i.imgur.com/7Mqu5Ma.png")
+        .setAuthor("Bug Report!", imgs.eyeBOT)
         .setThumbnail(sender.avatarURL)
         .setDescription(`Bug enviado por:\nUsername: ${sender.username}\nID: ${sender.id}\n${sender.tag}\nDesde el servidor: ${message.guild.name}`)
         .addField("Reporte", reporte)
