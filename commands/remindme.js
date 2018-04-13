@@ -16,6 +16,7 @@ exports.run = (client, message, args, sender, perms) => {
 
         medidaTiempo = message[1].substring((message[1].length - 1), (message[1].length));
         tiempo = message[1].substring(0, (message[1].length - 1));
+        var timeRespuesta = tiempo;
 
         switch (medidaTiempo) {
             case 's':
@@ -40,7 +41,7 @@ exports.run = (client, message, args, sender, perms) => {
         }
 
         console.log(chalk.bgBlackBright('[Reminder IN]') + ' ' + msg.author.username + '@' + msg.guild.name + ` [${message}] - [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
-
+        msg.channel.send('Anotado! En: ' + timeRespuesta + medidaTiempo + ' te aviso!');
         client.setTimeout(function () {
 
             message.shift();
