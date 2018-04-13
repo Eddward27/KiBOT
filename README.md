@@ -34,6 +34,7 @@ El prefijo del bot es: `-`
 - frog => Muestra rana random desde: 'https://www.reddit.com/r/frog'
 - help => Muestra ayuda de los comandos
 - helpme => Envía la lista de comandos por DM
+- ok => Claaaaaaaro...
 - owl => Muestra búho random desde: 'https://www.reddit.com/r/owls'
 - ping => Pong!(ms)
 - pokefusion => Muestra una Pokéfusion aleatoria (Gen. 1) o bien recibe dos números hasta el 151 para crear la fusion pedida
