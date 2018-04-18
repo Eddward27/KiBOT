@@ -2,7 +2,7 @@
     "birdAPI": "http://random.birb.pw/tweet/",
     "birdIMG": "https://random.birb.pw/img/",
     "catAPI": "http://aws.random.cat/meow",
-    "dogAPI": "https://random.dog/woof.json?filter=mp4,webm",
+    "dogAPI": "https://dog.ceo/api/breeds/image/random",
     "foxAPI": "https://giraffeduck.com/api/fox/",
     "snakeAPI": "http://fur.im/snek/"
 }

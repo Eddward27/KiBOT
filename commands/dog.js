@@ -13,8 +13,8 @@ exports.run = (client, message, args, sender, perms) => {
             let bodyJSON = JSON.parse(body);
             const embed = new Discord.RichEmbed()
                 .setColor(0x880000)
-                .setImage(bodyJSON.url)
-                .setFooter('Auspiciado por: random.dog');
+                .setImage(bodyJSON.message)
+                .setFooter('Auspiciado por: dog.ceo');
             message.channel.send({embed});
             console.log(chalk.bgMagenta('[Perro]') + ' '+ sender.username + '@' + message.channel.name + ' URL: ' + bodyJSON.url + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
         }
@@ -30,6 +30,6 @@ exports.conf = {
 
 exports.help = {
   name: 'dog',
-  description: 'Perrito random auspiciado por: random.dog',
+  description: 'Perrito random auspiciado por: dog.ceo',
   usage: 'dog'
 };
