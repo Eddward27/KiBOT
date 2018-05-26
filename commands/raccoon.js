@@ -16,14 +16,15 @@ exports.run = (client, message, args, sender, perms) => {
 };
 
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['mapache', 'mapocho', 'racc', 'trashpanda', 'ladron'],
-  permLevel: 0
+    enabled: true,
+    guildOnly: false,
+    aliases: ['mapache', 'mapocho', 'racc', 'trashpanda', 'ladron'],
+    permLevel: 0,
+    category: 'imagenes'
 };
 
 exports.help = {
-  name: 'raccoon',
-  description: 'Mapache random auspiciado por: /r/raccoons',
-  usage: 'raccoon'
+    name: 'raccoon',
+    description: 'Mapache random auspiciado por: /r/raccoons',
+    usage: 'raccoon'
 };

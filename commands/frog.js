@@ -16,14 +16,15 @@ exports.run = (client, message, args, sender, perms) => {
 };
 
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['ribbit', 'rana', 'sapo', 'sapito', 'sapolio', 'froggo'],
-  permLevel: 0
+    enabled: true,
+    guildOnly: false,
+    aliases: ['ribbit', 'rana', 'sapo', 'sapito', 'sapolio', 'froggo', 'froppy'],
+    permLevel: 0,
+    category: 'imagenes'
 };
 
 exports.help = {
-  name: 'frog',
-  description: 'Rana random auspiciada por: /r/frogs',
-  usage: 'frog'
+    name: 'frog',
+    description: 'Rana random auspiciada por: /r/frogs',
+    usage: 'frog'
 };

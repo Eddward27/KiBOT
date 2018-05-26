@@ -1,8 +1,28 @@
 {
     "birdAPI": "http://random.birb.pw/tweet/",
     "birdIMG": "https://random.birb.pw/img/",
-    "catAPI": "http://aws.random.cat/meow",
-    "dogAPI": "https://dog.ceo/api/breeds/image/random",
-    "foxAPI": "https://giraffeduck.com/api/fox/",
-    "snakeAPI": "http://fur.im/snek/"
+    "catAPI":{
+        "api": "http://aws.random.cat/meow",
+        "source": "random.cat",
+        "consoleTag": "[Gato]",
+        "entrada": "file"
+    },
+    "dogAPI":{
+        "api": "https://dog.ceo/api/breeds/image/random",
+        "source": "dog.ceo",
+        "consoleTag": "[Perro]",
+        "entrada": "message"
+    },
+    "foxAPI":{
+        "api": "https://giraffeduck.com/api/fox/",
+        "source": "giraffeduck.com",
+        "consoleTag": "[Zorro]",
+        "entrada": "url"
+    },
+    "snakeAPI":{
+        "api": "http://fur.im/snek/",
+        "source": "fur.im",
+        "consoleTag": "[Snake]",
+        "entrada": "file"
+    }
 }

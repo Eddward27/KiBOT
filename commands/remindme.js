@@ -64,14 +64,15 @@ exports.run = (client, message, args, sender, perms) => {
 };
 
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['recuerdame', 'avisame','acuerdame'],
-  permLevel: 0
+    enabled: true,
+    guildOnly: false,
+    aliases: ['recuerdame', 'avisame','acuerdame'],
+    permLevel: 0,
+    category: 'util'
 };
 
 exports.help = {
-  name: 'remindme',
-  description: 'Deja que KiBOT te recuerde algo en el tiempo especificado',
-  usage: 'remindme <tiempo> <mensaje>'
+    name: 'remindme',
+    description: 'Deja que KiBOT te recuerde algo en el tiempo especificado',
+    usage: 'remindme <tiempo> <mensaje>'
 };

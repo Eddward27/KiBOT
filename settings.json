@@ -1,16 +1,12 @@
 {
-	"ownerid": "217766713343737858",
-	"spamChannel": "305843252769193986",
-	"modrolename": "Mod",
-	"adminrolename": "Admin",
-	"prefix": "-",
-	"token": "TOKEN HERE!!!!",
-	"guildID": "368996103477002242",
-	"guildPrimaryChannel": "372235242293166080",
-	"respetos": "0",
-	"countSpam": "0",
-	"countReport": "0",
-	"idSpam": "",
-	"invite": "https://discordapp.com/oauth2/authorize?client_id=361903392005554176&permissions=8&scope=bot",
-	"support": "https://discord.gg/JWkPJzt"
+    "modRoleName": "Mod",
+    "adminRoleName": "Admin",
+    "prefix": "-",
+    "invite": "https://discordapp.com/oauth2/authorize?client_id=361903392005554176&permissions=2146954359&scope=bot",
+    "support": "https://discord.gg/JWkPJzt",
+    "color": "0x3069B8",
+    "giphyLogo": "https://cdn.glitch.com/177c12f1-a996-44ee-a956-904ef56d4dd9%2FPoweredBy_200px-Black_HorizText.png?1527158579174",
+    "giphyToken": "TU TOKE DE GIPHY API",
+    "token": "TU TOKEN",
+    "ownerID": "TU ID"
 }

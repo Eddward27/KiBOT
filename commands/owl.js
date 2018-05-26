@@ -16,14 +16,15 @@ exports.run = (client, message, args, sender, perms) => {
 };
 
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['chuncho', 'buho', 'fukuro', 'owls', 'chunchos', 'buhos'],
-  permLevel: 0
+    enabled: true,
+    guildOnly: false,
+    aliases: ['chuncho', 'buho', 'fukuro', 'owls', 'chunchos', 'buhos'],
+    permLevel: 0,
+    category: 'imagenes'
 };
 
 exports.help = {
-  name: 'owl',
-  description: 'Búho random auspiciado por: /r/owls',
-  usage: 'owl'
+    name: 'owl',
+    description: 'Búho random auspiciado por: /r/owls',
+    usage: 'owl'
 };

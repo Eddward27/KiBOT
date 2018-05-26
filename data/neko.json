@@ -1,0 +1,65 @@
+{
+    "react": {
+        "tickle": {"api": "https://nekos.life/api/v2/img/tickle", "consoleTag": "[AnimeTickle]", "alone": "-SENDER- se hace cosquillas, no necesita a nadie más para reir", "mention": "-SENDER- hace cosquillas a -TARGET-"},
+        "feed": {"api": "https://nekos.life/api/v2/img/feed", "consoleTag": "[AnimeFeed]", "alone": "-SENDER- parece tener hambre, toma esto", "mention": "-SENDER- da de comer a -TARGET-"},
+        "poke": {"api": "https://nekos.life/api/v2/img/poke", "consoleTag": "[AnimePoke]", "alone": "-SENDER- recibió mis toques", "mention": "-SENDER- tocó a -TARGET-"},
+        "slap": {"api": "https://nekos.life/api/v2/img/slap", "consoleTag": "[AnimeSlap]", "alone": "-SENDER- se abofetea a sí mismo, que raro...", "mention": "-SENDER- abofetea a -TARGET-, se lo merecía"},
+        "pat": {"api": "https://nekos.life/api/v2/img/pat", "consoleTag": "[AnimePat]", "alone": "Tranquilo -SENDER-, ten mi cariño", "mention": "-SENDER- envía palmadas a -TARGET-"},
+        "kiss": {"api": "https://nekos.life/api/v2/img/kiss", "consoleTag": "[AnimeKiss]", "alone": "-SENDER- se está besando a sí mismo", "mention": "-SENDER- besó a -TARGET-, uuuyy"},
+        "cuddle": {"api": "https://nekos.life/api/v2/img/cuddle", "consoleTag": "[AnimeCuddle]", "alone": "-SENDER- se acurrucó", "mention": "-SENDER- se acurruca con -TARGET-"},
+        "hug": {"api": "https://nekos.life/api/v2/img/hug", "consoleTag": "[AnimeHug]", "alone": "-SENDER- aquí tienes un abrazo", "mention": "-SENDER- abrazó a -TARGET-"}
+    },
+    "anime": {
+        "wallpaper": {"api": "https://nekos.life/api/v2/img/wallpaper", "consoleTag": "[AnimeWallpaper]", "name": "Wallpaper"},
+        "neko": {"api": "https://nekos.life/api/v2/img/neko", "consoleTag": "[AnimeNeko]", "name": "Neko"},
+        "nekoGif": {"api": "https://nekos.life/api/v2/img/ngif", "consoleTag": "[AnimeNekoG]", "name": "Neko Gif"},
+        "kemono": {"api": "https://nekos.life/api/v2/img/kemonomimi", "consoleTag": "[AnimeKemono]", "name": "Kemono"},
+        "avatar": {"api": "https://nekos.life/api/v2/img/avatar", "consoleTag": "[AnimeAvatar]", "name": "Avatar"},
+        "kitsune": {"api": "https://nekos.life/api/v2/img/fox_girl", "consoleTag": "[AnimeKitsune]", "name": "Kitsune"}
+    },
+    "nsfw": {
+        "img": {
+            "feet": {"api": "https://nekos.life/api/v2/img/feet", "consoleTag": "[AnimeNSFW-Feet]"},
+            "erofeet": {"api": "https://nekos.life/api/v2/img/erofeet", "consoleTag": "[AnimeNSFW-EroFeet]"},
+            "yuri": {"api": "https://nekos.life/api/v2/img/yuri", "consoleTag": "[AnimeNSFW-Yuri]"},
+            "eroyuri": {"api": "https://nekos.life/api/v2/img/eroyuri", "consoleTag": "[AnimeNSFW-EroYuri]"},
+            "trap": {"api": "https://nekos.life/api/v2/img/trap", "consoleTag": "[AnimeNSFW-Trap]"},
+            "futa": {"api": "https://nekos.life/api/v2/img/futanari", "consoleTag": "[AnimeNSFW-Futa]"},
+            "holo": {"api": "https://nekos.life/api/v2/img/holo", "consoleTag": "[AnimeNSFW-Holo]"},
+            "hololewd": {"api": "https://nekos.life/api/v2/img/hololewd", "consoleTag": "[AnimeNSFW-Hololewd]"},
+            "holoero": {"api": "https://nekos.life/api/v2/img/holoero", "consoleTag": "[AnimeNSFW-Holoero]"},
+            "lewdkemono": {"api": "https://nekos.life/api/v2/img/lewdkemo", "consoleTag": "[AnimeNSFW-LewdKemono]"},
+            "erokemono": {"api": "https://nekos.life/api/v2/img/erokemo", "consoleTag": "[AnimeNSFW-EroKemono]"},
+            "lewdkitsune": {"api": "https://nekos.life/api/v2/img/lewdk", "consoleTag": "[AnimeNSFW-LewdKitsune]"},
+            "erokitsune": {"api": "https://nekos.life/api/v2/img/erok", "consoleTag": "[AnimeNSFW-EroKitsune]"},
+            "lewd": {"api": "https://nekos.life/api/v2/img/lewd", "consoleTag": "[AnimeNSFW-Lewd]"},
+            "neko": {"api": "https://nekos.life/api/v2/img/eron", "consoleTag": "[AnimeNSFW-Neko]"},
+            "cum": {"api": "https://nekos.life/api/v2/img/cum_jpg", "consoleTag": "[AnimeNSFW-Cum]"},
+            "solo": {"api": "https://nekos.life/api/v2/img/solo", "consoleTag": "[AnimeNSFW-Solo]"},
+            "avatar": {"api": "https://nekos.life/api/v2/img/nsfw_avatar", "consoleTag": "[AnimeNSFW-Avatar]"},
+            "hentai": {"api": "https://nekos.life/api/v2/img/hentai", "consoleTag": "[AnimeNSFW-Hentai]"},
+            "keta": {"api": "https://nekos.life/api/v2/img/keta", "consoleTag": "[AnimeNSFW-Keta]"},
+            "blowjob": {"api": "https://nekos.life/api/v2/img/blowjob", "consoleTag": "[AnimeNSFW-Blowjob]"},
+            "tits": {"api": "https://nekos.life/api/v2/img/tits", "consoleTag": "[AnimeNSFW-Tits]"},
+            "smalltits": {"api": "https://nekos.life/api/v2/img/smallboobs", "consoleTag": "[AnimeNSFW-Smalltits]"},
+            "pussy": {"api": "https://nekos.life/api/v2/img/pussy_jpg", "consoleTag": "[AnimeNSFW-Pussy]"},
+            "femdom": {"api": "https://nekos.life/api/v2/img/femdom", "consoleTag": "[AnimeNSFW-Femdom]"},
+            "ero": {"api": "https://nekos.life/api/v2/img/ero", "consoleTag": "[AnimeNSFW-Ero]"}
+        },
+        "gif": {
+            "solo": {"api": "https://nekos.life/api/v2/img/solog", "consoleTag": "[AnimeNSFW-SoloG]"},
+            "feet": {"api": "https://nekos.life/api/v2/img/feetg", "consoleTag": "[AnimeNSFW-FeetG]"},
+            "cum": {"api": "https://nekos.life/api/v2/img/cum", "consoleTag": "[AnimeNSFW-CumG]"},
+            "lesbian": {"api": "https://nekos.life/api/v2/img/les", "consoleTag": "[AnimeNSFW-LesbianG]"},
+            "neko": {"api": "https://nekos.life/api/v2/img/nsfw_neko_gif", "consoleTag": "[AnimeNSFW-NekoG]"},
+            "blowjob": {"api": "https://nekos.life/api/v2/img/bj", "consoleTag": "[AnimeNSFW-BlowjobG]"},
+            "anal": {"api": "https://nekos.life/api/v2/img/anal", "consoleTag": "[AnimeNSFW-AnalG]"},
+            "pussy": {"api": "https://nekos.life/api/v2/img/pussy", "consoleTag": "[AnimeNSFW-PussyG]"},
+            "pwank": {"api": "https://nekos.life/api/v2/img/pwankg", "consoleTag": "[AnimeNSFW-PwankG]"},
+            "classic": {"api": "https://nekos.life/api/v2/img/classic", "consoleTag": "[AnimeNSFW-ClassicG]"},
+            "kuni": {"api": "https://nekos.life/api/v2/img/kuni", "consoleTag": "[AnimeNSFW-KuniG]"},
+            "tits": {"api": "https://nekos.life/api/v2/img/boobs", "consoleTag": "[AnimeNSFW-TitsG]"},
+            "hentai": {"api": "https://nekos.life/api/v2/img/Random_hentai_gif", "consoleTag": "[AnimeNSFW-HentaiG]"}
+        }
+    }
+}

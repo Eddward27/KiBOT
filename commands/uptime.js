@@ -28,14 +28,15 @@ exports.run = (client, message, args, sender, perms) => {
 };
 
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['alive'],
-  permLevel: 0
+    enabled: true,
+    guildOnly: false,
+    aliases: ['alive'],
+    permLevel: 0,
+    category: 'general'
 };
 
 exports.help = {
-  name: 'uptime',
-  description: 'Tiempo que llevo vivo',
-  usage: 'uptime'
+    name: 'uptime',
+    description: 'Tiempo que llevo vivo',
+    usage: 'uptime'
 };

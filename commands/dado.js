@@ -3,8 +3,8 @@ exports.run = (client, message, args, sender, perms) => {
     const moment = require('moment');
     const chalk = require('chalk');
     const dado = require('../data/dado.json');
-    message.channel.send(sender+' lanzó un dado...');	//Prepara la tensión en el ambiente
-    let resultado = (Math.floor(Math.random() * 6)); //Resultado [1,6]
+    message.channel.send(sender + ' lanzó un dado...');
+    let resultado = (Math.floor(Math.random() * 6));
     const embed = new Discord.RichEmbed()
         .setAuthor('Dado')
         .setDescription('El resultado es: ' + (resultado+1))
@@ -15,14 +15,15 @@ exports.run = (client, message, args, sender, perms) => {
 };
 
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: [],
-  permLevel: 0
+    enabled: true,
+    guildOnly: false,
+    aliases: [],
+    permLevel: 0,
+    category: 'util'
 };
 
 exports.help = {
-  name: 'dado',
-  description: 'Lanza un dado',
-  usage: 'dado'
+    name: 'dado',
+    description: 'Lanza un dado',
+    usage: 'dado'
 };

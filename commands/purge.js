@@ -1,12 +1,12 @@
-exports.run = (client, message, args, sender) => {
+exports.run = async (client, message, args, sender) => {
     const Discord = require('discord.js');
     const messagecount = parseInt(args.join(' '));
     const moment = require('moment');
     const chalk = require('chalk');
-    message.delete();
+    await message.delete();
     if(isNaN(messagecount)) return message.channel.send("Especifica una cantidad de [2, 100] mensajes para borrar");
     if(messagecount < 2 || messagecount > 100) return;
-    message.channel.fetchMessages({
+    await message.channel.fetchMessages({
       limit: messagecount
   }).then(messages => {
       message.channel.bulkDelete(messages)
@@ -20,14 +20,15 @@ exports.run = (client, message, args, sender) => {
 };
 
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['delete', 'pg'],
-  permLevel: 1
+    enabled: true,
+    guildOnly: false,
+    aliases: ['delete', 'pg'],
+    permLevel: 1,
+    category: 'guild'
 };
 
 exports.help = {
-  name: 'purge',
-  description: 'Borra \'x\' mensajes de un canal',
-  usage: 'purge <cantidad>'
+    name: 'purge',
+    description: 'Borra \'x\' mensajes de un canal',
+    usage: 'purge <cantidad>'
 };

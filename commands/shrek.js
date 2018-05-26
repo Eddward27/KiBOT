@@ -11,14 +11,15 @@ exports.run = (client, message, args, sender, perms) => {
 };
 
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['orgo'],
-  permLevel: 0
+    enabled: true,
+    guildOnly: false,
+    aliases: ['orgo'],
+    permLevel: 0,
+    category: 'imagenes'
 };
 
 exports.help = {
-  name: 'shrek',
-  description: 'shrek',
-  usage: 'shrek'
+    name: 'shrek',
+    description: 'shrek',
+    usage: 'shrek'
 };

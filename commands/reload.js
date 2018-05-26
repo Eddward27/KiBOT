@@ -1,4 +1,6 @@
 exports.run = (client, message, args, sender, perms) => {
+    if(args.length !== 1)
+        return message.channel.send(`Por favor especifíca un comando a recargar`);
     message.channel.send(`Recargando comando: ${args[0]}`);
     let reload = client.reload(args[0]);
     reload.then(resolve => {
@@ -13,12 +15,13 @@ exports.run = (client, message, args, sender, perms) => {
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: [],
-    permLevel: 4
+    aliases: ['refresh'],
+    permLevel: 4,
+    category: 'admin'
 };
 
 exports.help = {
     name: 'reload',
-    description: 'Recarga un comando [Owner Only]',
+    description: '[Owner Only] Recarga un comando',
     usage: 'reload <comando>'
 };

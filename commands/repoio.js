@@ -21,14 +21,15 @@ exports.run = (client, message, args, sender, perms) => {
 };
 
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['repollo', 'repoiazo'],
-  permLevel: 0
+    enabled: true,
+    guildOnly: false,
+    aliases: ['repollo', 'repoiazo', 'rechicken'],
+    permLevel: 0,
+    category: 'imagenes'
 };
 
 exports.help = {
-  name: 'repoio',
-  description: 'Supernova repoio',
-  usage: 'repoio [usuario]'
+    name: 'repoio',
+    description: 'Supernova repoio',
+    usage: 'repoio [usuario]'
 };

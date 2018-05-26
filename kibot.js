@@ -13,19 +13,22 @@ const log = message => {
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 fs.readdir('./commands/', (err, files) => {
-    if (err) console.error(err);
+    let comandosCargados = ''
+    if (err) console.log(`Command load error: ${err}`);
     log(`Cargando ${files.length} comandos.`);
     files.forEach(f => {
         let props = require(`./commands/${f}`);
-        log(`Cargando comando: ${props.help.name}. 👌`);
+        comandosCargados = comandosCargados + `${props.help.name}, `;
         client.commands.set(props.help.name, props);
         props.conf.aliases.forEach(alias => {
             client.aliases.set(alias, props.help.name);
         });
     });
+    comandosCargados = comandosCargados.slice(0, -2);
+    log(`Comandos cargados: ${comandosCargados}`)
 });
 
-client.reload = command => {
+client.reload = command =>{
     return new Promise((resolve, reject) => {
         try {
             delete require.cache[require.resolve(`./commands/${command}`)];
@@ -46,32 +49,33 @@ client.reload = command => {
 };
 
 client.elevation = message => {
-    /* This function should resolve to an ELEVATION level which
-    is then sent to the command handler for verification*/
     let permlvl = 0;
-    let reg_role = message.guild.roles.find('name', settings.regRoleName)
-    if (reg_role && message.member.roles.has(reg_role.name)) permlvl = 1;
     let mod_role = message.guild.roles.find('name', settings.modRoleName);
-    if (mod_role && message.member.roles.has(mod_role.name)) permlvl = 2;
+    if (mod_role && message.member.roles.has(mod_role.id)) permlvl = 1;
     let admin_role = message.guild.roles.find('name', settings.adminRoleName);
-    if (admin_role && message.member.roles.has(admin_role.name)) permlvl = 3;
-    if (message.author.id === settings.ownerid) permlvl = 4;
+    if (admin_role && message.member.roles.has(admin_role.id)) permlvl = 2;
+    if (message.author.id === message.guild.ownerID) permlvl = 3;
+    if (message.author.id === settings.ownerID) permlvl = 4;
     return permlvl;
 };
 
-var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
-/*
-client.on('debug', e => {
-console.log(chalk.bgBlue.green(e.replace));//console.log(chalk.bgBlue.green(e.replace(regToken, 'that was redacted')));
-});
-*/
-
 client.on('warn', e => {
-    console.log(chalk.bgYellow('[ADVERTENCIA]: ' + e.replace));//console.log(chalk.bgYellow(e.replace(regToken, 'that was redacted')));
+    console.log(chalk.bgYellow('[ADVERTENCIA]: ' + e.replace) + " - " + moment().format('YYYY-MM-DD HH:mm:ss'));
 });
 
 client.on('error', e => {
-    console.log(chalk.bgRed('[ERROR]: ' + e.replace));//console.log(chalk.bgRed(e.replace(regToken, 'that was redacted')));
+    console.log(chalk.bgRed('[ERROR]: ' + e.replace) + " - " + moment().format('YYYY-MM-DD HH:mm:ss'));
+});
+
+client.on("guildCreate", guild => {
+    console.log(`${chalk.green('[NUEVO SERVIDOR]: ')} Unido a: ${guild.name} (id: ${guild.id}). Con: ${guild.memberCount} miembros! - ${moment().format('YYYY-MM-DD HH:mm:ss')}`);
+    if (guild.systemChannel)
+        guild.systemChannel.send(`Gracias por añadirme al servidor, usa el comando \`${settings.prefix}help\` para más información`);
+    client.user.setActivity(`Trolleando en ${client.guilds.size} servidores!`);
+});
+
+process.on('unhandledRejection', err => {
+    console.log(`${chalk.bgRed("ERROR UNHANDLED: ")} ${err} - [${moment().format('YYYY-MM-DD HH:mm:ss')}]`)
 });
 
 client.login(settings.token);

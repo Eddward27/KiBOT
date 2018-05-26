@@ -1,28 +1,26 @@
 {
-  "name": "kibot",
-  "version": "0.0.1",
-  "description": "KiBOT for Discord",
-  "main": "kibot.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Eddward27/KiBOT.git"
-  },
-  "author": "Edd",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Eddward27/KiBOT/issues"
-  },
-  "homepage": "https://github.com/Eddward27/KiBOT#readme",
-  "dependencies": {
-    "chalk": "^2.3.2",
-    "discord.js": "^11.3.2",
-    "moment": "^2.21.0",
-    "npm": "^5.7.1",
-    "random-frog": "^2.0.0",
-    "random-puppy": "^1.1.0",
-    "request": "^2.85.0"
-  }
+    "name": "KiBOT",
+    "version": "1.0.1",
+    "description": "KiBOT for Discord",
+    "scripts": {
+        "start": "node kibot.js"
+    },
+    "dependencies": {
+        "chalk": "^2.4.1",
+        "giphy-js-sdk-core": "^1.0.3",
+        "jimp": "^0.2.28",
+        "discord.js": "^11.3.2",
+        "moment": "^2.22.1",
+        "npm": "^6.1.0",
+        "random-frog": "^2.0.0",
+        "random-puppy": "^1.1.0",
+        "request": "^2.87.0"
+    },
+    "engines": {
+        "node": "9.7.1"
+    },
+    "repository": {
+        "url": "https://github.com/Eddward27/KiBOT"
+    },
+    "license": "MIT"
 }

@@ -3,14 +3,15 @@ exports.run = (client, message, args, sender, perms) => {
 };
 
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: [],
-  permLevel: 0
+    enabled: true,
+    guildOnly: false,
+    aliases: [],
+    permLevel: 0,
+    category: 'category'
 };
 
 exports.help = {
-  name: 'name',
-  description: 'desc',
-  usage: 'uso'
+    name: 'name',
+    description: 'desc',
+    usage: 'uso'
 };

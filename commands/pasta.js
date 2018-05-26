@@ -6,8 +6,8 @@ exports.run = (client, message, args, sender) => {
     let pasta = message.mentions.members.first();
     if(!pasta){
         const embed = new Discord.RichEmbed()
-            .setColor(0xD6832A)
-            .setImage(imgs.pasta);
+        .setColor(0xD6832A)
+        .setImage(imgs.pasta);
         message.channel.send({embed});
         console.log(chalk.bgRed('[Pasta]') + ' '+ sender.username + '@' + message.channel.name + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
         return;
@@ -21,14 +21,15 @@ exports.run = (client, message, args, sender) => {
 };
 
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['pastita'],
-  permLevel: 0
+    enabled: true,
+    guildOnly: false,
+    aliases: ['pastita'],
+    permLevel: 0,
+    category: 'imagenes'
 };
 
 exports.help = {
-  name: 'pasta',
-  description: 'En la pasta',
-  usage: 'pasta [usuario]'
+    name: 'pasta',
+    description: 'En la pasta',
+    usage: 'pasta [usuario]'
 };

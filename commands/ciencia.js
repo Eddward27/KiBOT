@@ -12,14 +12,15 @@ exports.run = (client, message, args, sender, perms) => {
 };
 
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['science'],
-  permLevel: 0
+    enabled: true,
+    guildOnly: false,
+    aliases: ['science'],
+    permLevel: 0,
+    category: 'imagenes'
 };
 
 exports.help = {
-  name: 'ciencia',
-  description: 'No lo digo yo... lo dice la ciencia',
-  usage: 'ciencia'
+    name: 'ciencia',
+    description: 'No lo digo yo... lo dice la ciencia',
+    usage: 'ciencia'
 };

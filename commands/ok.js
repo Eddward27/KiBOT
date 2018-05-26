@@ -6,9 +6,9 @@ exports.run = (client, message, args, sender, perms) => {
     let claro = message.mentions.members.first();
     if(!claro){
         const embed = new Discord.RichEmbed()
-            .setDescription('Claaaaaaaro...')
-            .setColor(0xFF8C28)
-            .setImage(imgs.thumbsup);
+        .setDescription('Claaaaaaaro...')
+        .setColor(0xFF8C28)
+        .setImage(imgs.thumbsup);
         message.channel.send({embed});
         console.log(chalk.bgRed('[OK]') + ' '+ sender.username + '@' + message.channel.name + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
         return;
@@ -22,14 +22,15 @@ exports.run = (client, message, args, sender, perms) => {
 };
 
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['k', 'bueno', 'ya'],
-  permLevel: 0
+    enabled: true,
+    guildOnly: false,
+    aliases: ['k', 'bueno', 'ya'],
+    permLevel: 0,
+    category: 'imagenes'
 };
 
 exports.help = {
-  name: 'ok',
-  description: 'Claaaaro...',
-  usage: 'ok [usuario]'
+    name: 'ok',
+    description: 'Claaaaro...',
+    usage: 'ok [usuario]'
 };

@@ -11,6 +11,9 @@ exports.run = (client, message, args, sender) => {
     if (args.length < 1){
         pkmn1 = Math.floor(Math.random() * poke.name.length);
         pkmn2 = Math.floor(Math.random() * poke.name.length);
+        while (pkmn1 === pkmn2){
+            var pkmn2 = Math.floor(Math.random() * poke.name.length);
+        }
     }else{
         var customPKMN1 = parseInt(args[0])
         var customPKMN2 = parseInt(args[1])
@@ -20,11 +23,8 @@ exports.run = (client, message, args, sender) => {
         pkmn1 = customPKMN1
         pkmn2 = customPKMN2
     }
-    while (pkmn1 === pkmn2){
-        var pkmn2 = Math.floor(Math.random() * poke.name.length);
-    }
-    //var urlFusionIMG = "http://images.alexonsager.net/pokemon/fused/" + pkmn2 + "/" + pkmn2 + "." + pkmn1 + ".png"
-    //var urlFusion = "http://pokemon.alexonsager.net/" + pkmn1 + "/" + pkmn2
+  
+    var fusionURL = poke.urlFusionIMG + pkmn2 + '/' + pkmn2 + '.' + pkmn1 + '.png'
     var fusionName = poke.nameFront[pkmn1] + poke.nameEnd[pkmn2]
     var urlPKMN1 = poke.urlPKMN + poke.name[pkmn1]
     if(pkmn1 === 122){
@@ -38,12 +38,11 @@ exports.run = (client, message, args, sender) => {
     const embed = new Discord.RichEmbed()
         .setAuthor(fusionName, poke.pokeballICO, `${poke.urlFusion}${pkmn1}/${pkmn2}`)
         .setThumbnail(poke.dexSprite)
-        .setTitle("Pokéfusion!")
         .setURL(`${poke.urlFusion}${pkmn1}/${pkmn2}`)
         .setDescription("Fusion de: " + poke.name[pkmn1] + " & " + poke.name[pkmn2])
         .addField(poke.name[pkmn1], urlPKMN1)
         .addField(poke.name[pkmn2], urlPKMN2)
-        .setImage(`${poke.urlFusionIMG}${pkmn2}/${pkmn2}.${pkmn1}.png`)
+        .setImage(fusionURL)
         .setColor(0x770000)
         .setFooter(fusionName, poke.berry[footBerry]);
     message.channel.send({embed});
@@ -53,8 +52,9 @@ exports.run = (client, message, args, sender) => {
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ['poke', 'fusion'],
-    permLevel: 0
+    aliases: ['fusion'],
+    permLevel: 0,
+  category: 'fun'
 };
 
 exports.help = {

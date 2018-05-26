@@ -12,14 +12,15 @@ exports.run = (client, message, args, sender) => {
 };
 
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['uf','ufff'],
-  permLevel: 0
+    enabled: true,
+    guildOnly: false,
+    aliases: ['uf','ufff'],
+    permLevel: 0,
+    category: 'imagenes'
 };
 
 exports.help = {
-  name: 'uff',
-  description: 'm3n!',
-  usage: 'uff'
+    name: 'uff',
+    description: 'm3n!',
+    usage: 'uff'
 };

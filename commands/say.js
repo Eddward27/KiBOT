@@ -11,14 +11,15 @@ exports.run = (client, message, args, sender) => {
 };
 
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: [],
-  permLevel: 0
+    enabled: true,
+    guildOnly: false,
+    aliases: ['decir'],
+    permLevel: 0,
+    category: 'fun'
 };
 
 exports.help = {
-  name: 'say',
-  description: 'Digo algo?',
-  usage: 'say <mensaje>'
+    name: 'say',
+    description: 'Digo algo?',
+    usage: 'say <mensaje>'
 };

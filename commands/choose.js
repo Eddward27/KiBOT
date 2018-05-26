@@ -10,20 +10,12 @@ exports.run = (client, message, args, sender, perms) => {
         console.log(chalk.bgRed('[Choose]') + ' '+ sender.username + '@' + message.channel.name + ` sin argumentos mínimos [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
         return;
     }
-    let lowerArgs = elect.map(v => v.toLowerCase());
-    if (lowerArgs.includes('monika')){
-        message.channel.send("J̴̙͌ȕ̶̮͜s̴̗̳̐ť̸̊ͅM̸͔̍ǒ̵̗̬n̵̙̙̈́i̴̛̺̱̐k̵͕̟͊å̸͇̭ J̴̙͌ȕ̶̮͜s̴̗̳̐ť̸̊ͅM̸͔̍ǒ̵̗̬n̵̙̙̈́i̴̛̺̱̐k̵͕̟͊å̸͇̭ J̴̙͌ȕ̶̮͜s̴̗̳̐ť̸̊ͅM̸͔̍ǒ̵̗̬n̵̙̙̈́i̴̛̺̱̐k̵͕̟͊å̸͇̭ J̴̙͌ȕ̶̮͜s̴̗̳̐ť̸̊ͅM̸͔̍ǒ̵̗̬n̵̙̙̈́i̴̛̺̱̐k̵͕̟͊å̸͇̭ J̴̙͌ȕ̶̮͜s̴̗̳̐ť̸̊ͅM̸͔̍ǒ̵̗̬n̵̙̙̈́i̴̛̺̱̐k̵͕̟͊å̸͇̭ J̴̙͌ȕ̶̮͜s̴̗̳̐ť̸̊ͅM̸͔̍ǒ̵̗̬n̵̙̙̈́i̴̛̺̱̐k̵͕̟͊å̸͇̭ J̴̙͌ȕ̶̮͜s̴̗̳̐ť̸̊ͅM̸͔̍ǒ̵̗̬n̵̙̙̈́i̴̛̺̱̐k̵͕̟͊å̸͇̭ J̴̙͌ȕ̶̮͜s̴̗̳̐ť̸̊ͅM̸͔̍ǒ̵̗̬n̵̙̙̈́i̴̛̺̱̐k̵͕̟͊å̸͇̭");
-        message.channel.send("JUST");
-        message.channel.send("MONIKA")
-        console.log(chalk.bgRed('[Choose]') + ' '+ sender.username + '@' + message.channel.name + ` MONIKA [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
-        return;
-    }
     let indexChoose = Math.floor(Math.random() *elect.length);
     message.channel.send(`Yo eligo`)
+    .then(msg => {
+        msg.edit(`Yo eligo...`)
         .then(msg => {
-            msg.edit(`Yo eligo...`)
-                .then(msg => {
-                    msg.edit(`Yo eligo... \`${elect[indexChoose]}\``)
+            msg.edit(`Yo eligo... \`${elect[indexChoose]}\``)
         })
     });
     console.log(chalk.bgRed('[Choose]') + ' '+ sender.username + '@' + message.channel.name + ` Resultado: ${elect[indexChoose]} [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
@@ -33,7 +25,8 @@ exports.conf = {
     enabled: true,
     guildOnly: false,
     aliases: ['elige', 'escoge', 'selecciona', 'pick'],
-    permLevel: 0
+    permLevel: 0,
+    category: 'util'
 };
 
 exports.help = {

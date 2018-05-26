@@ -11,14 +11,15 @@ exports.run = (client, message, args, sender, perms) => {
 };
 
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: [],
-  permLevel: 0
+    enabled: true,
+    guildOnly: false,
+    aliases: [],
+    permLevel: 0,
+    category: 'imagenes'
 };
 
 exports.help = {
-  name: 'compila',
-  description: 'No compila :c',
-  usage: 'compila'
+    name: 'compila',
+    description: 'No compila :c',
+    usage: 'compila'
 };
