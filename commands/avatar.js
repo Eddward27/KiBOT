@@ -3,26 +3,20 @@ exports.run = (client, message, args, sender) => {
     const moment = require('moment');
     const chalk = require('chalk');
     let avatar = message.mentions.members.first();
-
-    if(avatar){
-        const embed = new Discord.RichEmbed()
-        .setAuthor('Avatar')
-        .setDescription(avatar)
-        .setColor(0xD9A744)
-        .setImage(avatar.user.displayAvatarURL)
-        .setURL(avatar.displayAvatarURL)
-        message.channel.send({embed});
-        console.log(chalk.bgBlackBright('[Avatar]') + ' ' + sender.username + '@' + message.channel.name + ` Avatar: ${avatar.user.username} [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
-        return;
+    if (avatar) {
+        avatar = avatar.user
+        console.log(`Avatar: ${avatar.tag}`);
+    } else {
+        avatar = sender
     }
     const embed = new Discord.RichEmbed()
-    .setAuthor('Avatar')
-    .setDescription(sender)
-    .setColor(0xD9A744)
-    .setImage(sender.avatarURL)
-    .setURL(sender.avatarURL)
+        .setAuthor('Avatar')
+        .setColor(0xD9A744)
+        .setDescription(avatar.tag)
+        .setImage(avatar.displayAvatarURL)
+        .setURL(avatar.displayAvatarURL);
     message.channel.send({embed});
-    console.log(chalk.bgBlackBright('[Avatar]') + ' ' + sender.username + '@' + message.channel.name + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
+    console.log(`${chalk.bgBlackBright('[Avatar]')} ${sender.username}@${message.channel.name} [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
 };
 
 exports.conf = {

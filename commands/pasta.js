@@ -4,20 +4,15 @@ exports.run = (client, message, args, sender) => {
     const chalk = require('chalk');
     const imgs = require('../data/imgs.json');
     let pasta = message.mentions.members.first();
-    if(!pasta){
-        const embed = new Discord.RichEmbed()
-        .setColor(0xD6832A)
-        .setImage(imgs.pasta);
-        message.channel.send({embed});
-        console.log(chalk.bgRed('[Pasta]') + ' '+ sender.username + '@' + message.channel.name + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
-        return;
-    }
     const embed = new Discord.RichEmbed()
-        .setDescription(pasta + ' está en la pasta')
         .setColor(0xD6832A)
         .setImage(imgs.pasta);
+    if(pasta){
+        embed.setDescription(pasta + ' está en la pasta')
+        console.log(`Pasta: ${pasta.displayName}`);
+    }
     message.channel.send({embed});
-    console.log('[Pasta] '+ sender.username + '@' + message.channel.name + ' hacia: ' + pasta.displayName + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
+    console.log(`${chalk.bgRed('[Pasta]')} ${sender.username}@${message.channel.name} [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
 };
 
 exports.conf = {

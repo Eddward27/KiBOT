@@ -4,20 +4,15 @@ exports.run = (client, message, args, sender, perms) => {
     const chalk = require('chalk');
     const imgs = require('../data/imgs.json');
     let repoio = message.mentions.members.first();
-    if(!repoio){
-        const embed = new Discord.RichEmbed()
-            .setColor(0x41C61F)
-            .setImage(imgs.repoio);
-        message.channel.send({embed});
-        console.log(chalk.bgRed('[Repollo]') + ' '+ sender.username + '@' + message.channel.name + `[${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
-        return;
-    }
     const embed = new Discord.RichEmbed()
-        .setDescription(repoio + ' terrible repoio!')
         .setColor(0x41C61F)
         .setImage(imgs.repoio);
+    if(repoio){
+        embed.setDescription(repoio + ' terrible repoio!')
+        console.log(`Repollo: ${repoio.displayName}`);
+    }
     message.channel.send({embed});
-    console.log(chalk.bgRed('[Repollo]') + ' '+ sender.username + '@' + message.channel.name + ' Repollo: ' + repoio.displayName + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
+    console.log(`${chalk.bgRed('[Repollo]')} ${sender.username}@${message.channel.name} [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
 };
 
 exports.conf = {
