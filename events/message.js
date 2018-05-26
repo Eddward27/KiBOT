@@ -34,6 +34,6 @@ module.exports = message => {
 
     if (cmd) {
         if (perms < cmd.conf.permLevel) return message.channel.send('No tienes permisos para ejecutar este comando');
-        cmd.run(client, message, params, sender, perms);
+        cmd.run(client, message, params, sender, perms, command);
     }
 };

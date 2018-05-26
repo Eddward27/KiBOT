@@ -1,4 +1,4 @@
-exports.run = (client, message, args, sender, perms) => {
+exports.run = (client, message, args, sender, perms, command) => {
     //Code
 };
 
