@@ -149,7 +149,7 @@ exports.run = (client, message, args, sender, perms) => {
         .setDescription(`Para más ayuda escribe \`${settings.prefix}help 'comando'\`\nCooldown: 2.5 seg.`)
         .setThumbnail('https://i.imgur.com/7Mqu5Ma.png')
         .setURL('https://kibot.glitch.me/comandos.html')
-        .setFooter(`https://kibot.glitch.me/ - Version: ${ver}`, 'https://i.imgur.com/7Mqu5Ma.png')
+        .setFooter(`https://kibot.glitch.me/ - Version: ${ver} - (´・ω・\`)`, 'https://i.imgur.com/7Mqu5Ma.png')
         .setColor(settings.color);
 
     if (general) embed.addField('General', general, true);
