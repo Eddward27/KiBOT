@@ -24,5 +24,4 @@ El prefijo del bot es: `-`
 - en `/commands` están todos los comandos disponibles
 - Usa `-help` para ver los comandos que puedes usar
 
-# ToDo
-Conquistar el mundo, etc...
+[![Discord Bots](https://discordbots.org/api/widget/361903392005554176.svg)](https://discordbots.org/bot/361903392005554176)
