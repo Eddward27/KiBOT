@@ -9,8 +9,8 @@ exports.run = (client, message) => {
     .then(msg => {
         let embedEdit = new Discord.RichEmbed()
             .setColor('FF0000')
-            .setDescription(`:ping_pong: Pong! - ${msg.createdTimestamp - message.createdTimestamp}ms!`)
-    msg.edit(embedEdit)
+            .setDescription(`:ping_pong: Pong!\nTiempo de respuesta: ${msg.createdTimestamp - message.createdTimestamp}ms!\nPing del bot: ${Math.trunc(client.ping)}\nPing Websocket: ${client.pings[0]}`)
+        msg.edit(embedEdit)
     });
     console.log(chalk.bgBlackBright('[Ping]') + ' ' + message.author.username + '@' + message.channel.name + ` [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
 };

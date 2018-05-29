@@ -50,12 +50,14 @@ client.reload = command =>{
 
 client.elevation = message => {
     let permlvl = 0;
-    let mod_role = message.guild.roles.find('name', settings.modRoleName);
-    if (mod_role && message.member.roles.has(mod_role.id)) permlvl = 1;
-    let admin_role = message.guild.roles.find('name', settings.adminRoleName);
-    if (admin_role && message.member.roles.has(admin_role.id)) permlvl = 2;
-    if (message.author.id === message.guild.ownerID) permlvl = 3;
-    if (message.author.id === settings.ownerID) permlvl = 4;
+    if (message.member){
+        let mod_role = message.guild.roles.find('name', settings.modRoleName);
+        if (mod_role && message.member.roles.has(mod_role.id)) permlvl = 1;
+        let admin_role = message.guild.roles.find('name', settings.adminRoleName);
+        if (admin_role && message.member.roles.has(admin_role.id)) permlvl = 2;
+        if (message.member.hasPermission('ADMINISTRATOR')) permlvl = 3;
+        if (message.author.id === process.env.OWNERID) permlvl = 4;
+    }
     return permlvl;
 };
 
@@ -70,8 +72,8 @@ client.on('error', e => {
 client.on("guildCreate", guild => {
     console.log(`${chalk.green('[NUEVO SERVIDOR]: ')} Unido a: ${guild.name} (id: ${guild.id}). Con: ${guild.memberCount} miembros! - ${moment().format('YYYY-MM-DD HH:mm:ss')}`);
     if (guild.systemChannel)
-        guild.systemChannel.send(`Gracias por añadirme al servidor, usa el comando \`${settings.prefix}help\` para más información`);
-    client.user.setActivity(`Trolleando en ${client.guilds.size} servidores!`);
+        guild.systemChannel.send(`Gracias por añadirme al servidor, usa el comando \`${settings.prefix}help\` para más información\nSi tienes alguna duda o sugerencia, puedes hacerla en mi servidor de soporte ${settings.support}`);
+    client.user.setActivity(`${client.guilds.size} servidores!`, { type: 'WATCHING' });
 });
 
 process.on('unhandledRejection', err => {
