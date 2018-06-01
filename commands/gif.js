@@ -1,6 +1,9 @@
 exports.run = (client, message, args, sender, perms) => {
     var msg = message;
-    require('../util/giphy')(args[0], "[Gif Req.]", msg);
+    if (args.length < 1)
+        return require('../util/giphy')('', "[Gif Req.]", msg);
+    let texto = args.join(" ");
+    require('../util/giphy')(texto, "[Gif Req.]", msg);
 };
 
 exports.conf = {
