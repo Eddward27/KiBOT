@@ -4,7 +4,7 @@ exports.run = (client, message, args, sender, perms, command) => {
     const chalk = require('chalk');
     const settings = require('../settings.json');
     if (args.length < 1) {
-        return message.channel.send(`Debes especificar al menos un nombre de usuario para buscar\nUsa \`${settings.prefix}help\` para más información`)
+        return message.channel.send(`Debes especificar al menos un nombre de usuario para buscar\nUsa \`${settings.prefix}help osu\` para más información`)
     }
     message.channel.startTyping()
     var request = require('request');
