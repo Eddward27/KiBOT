@@ -1,7 +1,7 @@
 # KiBOT
 [KiBOT](https://kibot.glitch.me) es un bot para [Discord](https://discordapp.com/) basado en [discord.js](https://github.com/hydrabolt/discord.js/)
 
-#Sitio Web
+# Sitio Web
 https://kibot.glitch.me/
 
 # Instalación
