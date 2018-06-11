@@ -9,5 +9,6 @@
     "giphyToken": "TU TOKE DE GIPHY API",
     "token": "TU TOKEN",
     "ownerID": "TU ID",
-    "osu": "TU TOKEN DE OSU"
+    "osu": "TU TOKEN DE OSU",
+    "OPENWEATHERMAP": "TOKEN DE OPENWEATHERMAP.ORG"
 }
