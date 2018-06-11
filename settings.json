@@ -10,5 +10,6 @@
     "token": "TU TOKEN",
     "ownerID": "TU ID",
     "osu": "TU TOKEN DE OSU",
-    "OPENWEATHERMAP": "TOKEN DE OPENWEATHERMAP.ORG"
+    "OPENWEATHERMAP": "TOKEN DE OPENWEATHERMAP.ORG",
+    "geniusToken": "TU TOKEN DE GENIUS.COM"
 }

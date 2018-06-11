@@ -15,7 +15,8 @@
         "npm": "^6.1.0",
         "random-frog": "^2.0.0",
         "random-puppy": "^1.1.0",
-        "request": "^2.87.0"
+        "request": "^2.87.0",
+        "node-genius": "^1.1.0"
     },
     "engines": {
         "node": "9.7.1"
