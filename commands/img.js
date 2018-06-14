@@ -30,5 +30,5 @@ exports.conf = {
 exports.help = {
   name: 'img',
   description: 'Retorna una imagen random desde un subreddit pedido\nEjemplo -img landscape',
-  usage: 'img'
+  usage: 'img <subreddit>'
 };

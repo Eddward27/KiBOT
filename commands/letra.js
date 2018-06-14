@@ -51,5 +51,5 @@ exports.conf = {
 exports.help = {
     name: 'letra',
     description: 'Obtiene la letra de alguna canción, Powered by genius.com',
-    usage: 'letra'
+    usage: 'letra <nombre cancion>'
 };
