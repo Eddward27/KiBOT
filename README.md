@@ -21,7 +21,8 @@ Luego, ejecutar el comando `node kibot.js` desde la ubicacion del bot
 
 El prefijo del bot es: `-`
 
-- en `/commands` están todos los comandos disponibles
+- En [KiBOT - Comandos](https://kibot.glitch.me/comandos.html) está la documentación completa de los comandos
+- En `/commands` están todos los comandos disponibles
 - Usa `-help` para ver los comandos que puedes usar
 
 [![Discord Bots](https://discordbots.org/api/widget/361903392005554176.svg)](https://discordbots.org/bot/361903392005554176)

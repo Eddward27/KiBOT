@@ -55,6 +55,7 @@ exports.run = (client, message, args, sender, perms, command) => {
             if (bodyJSON.length === 0) {
                 return message.channel.send('Usuario no encontrado :c');
             }
+            let img = `https://lemmmy.pw/osusig/sig.php?colour=pink&uname=${user}&mode=${type}&pp=2&countryrank&onlineindicator=undefined&xpbar`
             var acc = parseFloat(bodyJSON[0].accuracy)
             acc = acc.toFixed(2);
             const embed = new Discord.RichEmbed()
@@ -76,7 +77,8 @@ exports.run = (client, message, args, sender, perms, command) => {
                 .addField('PP', Math.trunc(bodyJSON[0].pp_raw), true)
                 .addField('Número de eventos', bodyJSON[0].events.length, true)
                 .addField('SS+ - SS - S+ - S - A', `${bodyJSON[0].count_rank_ssh} - ${bodyJSON[0].count_rank_ss} - ${bodyJSON[0].count_rank_sh} - ${bodyJSON[0].count_rank_s} - ${bodyJSON[0].count_rank_a}`)
-                .setFooter(`${modo}`, 'https://s.ppy.sh/favicon.ico');
+                .setImage(img)
+                .setFooter(`${modo}`);//, 'https://s.ppy.sh/favicon.ico');
             message.channel.send({embed});
             console.log(`${chalk.bgMagenta('[Osu]')} ${sender.username}@${message.channel.name} - ID User: ${bodyJSON[0].user_id} [${moment().format('YYYY-MM-DD HH:mm:ss')}]`);
             message.channel.stopTyping(true)

@@ -24,5 +24,11 @@
         "source": "fur.im",
         "consoleTag": "[Snake]",
         "entrada": "file"
+    },
+    "coffeeAPI":{
+        "api": "https://coffee.alexflipnote.xyz/random.json",
+        "source": "coffee.alexflipnote.xyz",
+        "consoleTag": "[Café]",
+        "entrada": "file"
     }
 }

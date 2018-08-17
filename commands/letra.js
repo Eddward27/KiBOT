@@ -19,7 +19,6 @@ exports.run = (client, message, args, sender, perms, command) => {
         }
         else {
             let resultado = JSON.parse(results);
-            console.log(resultado);
             if(resultado.response.hits.length){
                 message.channel.startTyping()
                 const embed = new Discord.RichEmbed()
