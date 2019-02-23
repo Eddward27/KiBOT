@@ -30,13 +30,13 @@ exports.run = (client, message, args, sender, perms) => {
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ['bug', 'reporte'],
+    aliases: ['bug', 'reportebug'],
     permLevel: 0,
-    category: 'general'
+  category: 'general'
 };
 
 exports.help = {
-    name: 'report',
+    name: 'bugreport',
     description: 'Envía un reporte de bug hacia los cuarteles generales de KiBOT',
     usage: 'report <mensaje>'
 };

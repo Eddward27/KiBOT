@@ -42,13 +42,13 @@ exports.run = (client, message, args, sender, perms, command) => {
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ['lyrics', 'lyric'],
+    aliases: ['letra', 'lyric'],
     permLevel: 0,
     category: 'util'
 };
 
 exports.help = {
-    name: 'letra',
+    name: 'lyrics',
     description: 'Obtiene la letra de alguna canción, Powered by genius.com',
-    usage: 'letra <nombre cancion>'
+    usage: 'lyrics <nombre cancion>'
 };

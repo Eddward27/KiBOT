@@ -70,9 +70,12 @@ client.on('error', e => {
 });
 
 client.on("guildCreate", guild => {
+    let intro = `Gracias por añadirme al servidor, usa el comando \`${settings.prefix}help\` para más información\nSi tienes alguna duda o sugerencia, puedes hacerla en mi servidor de soporte ${settings.support}`
     console.log(`${chalk.green('[NUEVO SERVIDOR]: ')} Unido a: ${guild.name} (id: ${guild.id}). Con: ${guild.memberCount} miembros! - ${moment().format('YYYY-MM-DD HH:mm:ss')}`);
     if (guild.systemChannel)
-        guild.systemChannel.send(`Gracias por añadirme al servidor, usa el comando \`${settings.prefix}help\` para más información\nSi tienes alguna duda o sugerencia, puedes hacerla en mi servidor de soporte ${settings.support}`);
+        guild.systemChannel.send(intro);
+    else
+        guild.owner.send(intro);
     client.user.setActivity(`${client.guilds.size} servidores!`, { type: 'WATCHING' });
 });
 

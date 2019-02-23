@@ -11,5 +11,7 @@
     "ownerID": "TU ID",
     "osu": "TU TOKEN DE OSU",
     "OPENWEATHERMAP": "TOKEN DE OPENWEATHERMAP.ORG",
-    "geniusToken": "TU TOKEN DE GENIUS.COM"
+    "geniusToken": "TU TOKEN DE GENIUS.COM",
+    "youtubeKey": "TOKEN DE YOUTUBE API",
+    "weezToken": "TOKEN DE WEEZ"
 }

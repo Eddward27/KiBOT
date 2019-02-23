@@ -2,10 +2,10 @@ const Discord = require('discord.js');
 const moment = require('moment');
 const chalk = require('chalk');
 var request = require('request');
+var GphApiClient = require('giphy-js-sdk-core')
 const settings = require('../settings.json');
 module.exports = (req, consoleTag, message) => {
-    var GphApiClient = require('giphy-js-sdk-core')
-    client = GphApiClient(settings.giphyToken)
+    var client = GphApiClient(process.env.GIPHY)
     let sender = message.author;
 
     client.random('gifs', {"tag": req, "fmt": "json"})
