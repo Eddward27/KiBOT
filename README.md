@@ -1,3 +1,6 @@
+# Atención
+Esta versión de KiBOT ya no será actualizada. (Ult. Ver. Feb 23, 2019)
+
 # KiBOT
 [KiBOT](https://kibot.glitch.me) es un bot para [Discord](https://discordapp.com/) basado en [discord.js](https://github.com/hydrabolt/discord.js/)
 
